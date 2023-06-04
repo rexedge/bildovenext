@@ -24,7 +24,7 @@ export default async function ContactAPI(req, res) {
 	try {
 		// Sending the first email to info@smartstepssolution.com
 		const mail = await transporter.sendMail({
-			from: 'info@smartstepssolution.com',
+			from: '"Smart Steps Financial Solutions" <info@smartstepssolution.com>',
 			to: 'info@smartstepssolution.com',
 			replyTo: email,
 			subject: subject,
