@@ -43,8 +43,52 @@ export const WELCOME_TEXT = `Welcome to ${COMPANY_PROFILE.name} Services, your
 					providing you with the knowledge, tools, and products
 					necessary to navigate the complexities of the financial
 					world.`;
-export const TESTIMONIES = `I am grateful for the expertise and support provided by the team at BrightStar Financial Solutions. As a trusted provider of comprehensive financial services, they have helped me navigate complex financial decisions and achieve my long-term goals. With their guidance, I have gained a greater understanding of how to manage my finances and secure a prosperous future for myself and my family. Thank you, BrightStar Financial Solutions, for your unwavering commitment to my financial success.`;
 
+export const TESTIMONIES = [
+	{
+		id: 0,
+		title: `John Smith`,
+		image: `/john.jpg`,
+		description: `"Thanks to Welcome to ${COMPANY_PROFILE.name} Services,
+				a leading provider of comprehensive financial solutions
+				designed to empower individuals and families on their
+				journey to financial success. With years of industry
+				experience and a passion for helping others, our team is
+				committed to guiding you towards a secure and prosperous
+				future. Services, I've gained a deeper understanding of
+				how to protect my income and make the most of my financial
+				opportunities. Their guidance has been invaluable."`,
+	},
+	{
+		id: 1,
+		title: `Comprehensive Services`,
+		image: `/john.jpg`,
+		description: `"I highly recommend Welcome to ${COMPANY_PROFILE.name}
+				Services, a leading provider of comprehensive financial
+				solutions designed to empower individuals and families on
+				their journey to financial success. With years of industry
+				experience and a passion for helping others, our team is
+				committed to guiding you towards a secure and prosperous
+				future. Services to anyone seeking financial security and
+				expert advice. Their personalized approach and comprehensive
+				services have exceeded my expectations."`,
+	},
+	{
+		id: 2,
+		title: `Tailored Solutions`,
+		image: `/john.jpg`,
+		description: `Thanks to Welcome to ${COMPANY_PROFILE.name} Services,
+				a leading provider of comprehensive financial solutions
+				designed to empower individuals and families on their
+				journey to financial success. With years of industry
+				experience and a passion for helping others, our team is
+				committed to guiding you towards a secure and prosperous
+				future. Services, I've learned how to create a solid
+				investment portfolio and plan for my future. Their expertise
+				has been essential in helping me achieve my financial
+				goals.`,
+	},
+];
 export const WHY_CHOOSE_US = [
 	{
 		id: 0,
@@ -78,6 +122,7 @@ export const WHY_CHOOSE_US = [
 					financial success and peace of mind.`,
 	},
 ];
+
 export const TEAM_MEMBERS = [
 	{
 		name: 'Kayode Atiba',
