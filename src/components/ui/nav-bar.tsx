@@ -36,47 +36,47 @@ export default function NavBar() {
 
 	return (
 		<Fragment>
-			<div className='w-screen bg-white dark:bg-teal-800 h-fit flex justify-between items-center py-2 px-10'>
+			<div className='w-screen bg-purple-200 dark:bg-purple-800 h-fit flex justify-between items-center py-2 px-10'>
 				<Link
 					href='/'
-					className='shrink-0 font-bold'
+					className='shrink-0 font-bold h-12 w-12'
 				>
 					<Image
 						height={50}
 						width={50}
 						src={'/ssf.png'}
 						alt=''
-						className='dark:invert'
+						className='dark:invert h-full object-contain w-full'
 					/>
 				</Link>
 				<div className='lg:flex justify-center w-full hidden'>
 					<Link
-						className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all duration-500'
 						href={'/about'}
 					>
 						ABOUT
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all duration-500'
 						href={'/products'}
 					>
 						PRODUCTS
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all duration-500'
 						href={'/services'}
 					>
 						SERVICES
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all duration-500'
 						href={'/contact'}
 					>
 						CONTACT
 					</Link>
 				</div>
 				<button
-					className='shrink-0 py-2 px-4 dark:bg-teal-900 bg-teal-200 hover:bg-teal-400 dark:hover:bg-teal-700 rounded-lg cursor-pointer lg:hidden relative'
+					className='shrink-0 py-2 px-4 dark:bg-purple-900 bg-purple-200 hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer lg:hidden relative'
 					onClick={toggleMenu}
 					ref={menuRef}
 				>
@@ -96,34 +96,34 @@ export default function NavBar() {
 						exit={{ opacity: 0, y: -1000 }}
 						transition={{ duration: 0.3 }}
 					>
-						<div className='bg-white dark:bg-teal-800 py-2 px-4 flex flex-col gap-10 items-center w-screen h-screen'>
+						<div className='bg-white dark:bg-purple-800 py-2 px-4 flex flex-col gap-10 items-center w-screen h-screen'>
 							<Link
-								className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all'
+								className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all'
 								href={'/about'}
 							>
 								ABOUT
 							</Link>
 							<Link
-								className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all'
+								className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all'
 								href={'/products'}
 							>
 								PRODUCTS
 							</Link>
 							<Link
-								className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all'
+								className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all'
 								href={'/services'}
 							>
 								SERVICES
 							</Link>
 							<Link
-								className='py-2 px-4 hover:text-teal-800 dark:hover:text-teal-200 hover:scale-110 transition-all'
+								className='py-2 px-4 hover:text-purple-800 dark:hover:text-purple-200 hover:scale-110 transition-all'
 								href={'/contact'}
 							>
 								CONTACT
 							</Link>
 							<Button
 								href={COMPANY_PROFILE.calendly}
-								className='shrink-0 py-2 px-4 dark:bg-teal-900 bg-teal-200 hover:bg-teal-400 dark:hover:bg-teal-700 rounded-lg cursor-pointer'
+								className='shrink-0 py-2 px-4 dark:bg-purple-900 bg-purple-200 hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 							>
 								BOOK CONSULTATION
 							</Button>

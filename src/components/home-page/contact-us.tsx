@@ -84,7 +84,7 @@ export default function ContactUs() {
 										id='name'
 										name='name'
 										placeholder='Name'
-										className='w-full bg-teal-100 dark:bg-teal-900 border-spacing-1 rounded-lg p-2'
+										className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
 										value={formData.name}
 										onChange={handleChange}
 										required
@@ -106,7 +106,7 @@ export default function ContactUs() {
 										name='email'
 										placeholder='Enter Email'
 										autoComplete='email'
-										className='w-full bg-teal-100 dark:bg-teal-900 border-spacing-1 rounded-lg p-2'
+										className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
 										value={formData.email}
 										onChange={handleChange}
 										required
@@ -128,7 +128,7 @@ export default function ContactUs() {
 									name='subject'
 									placeholder='Enter subject'
 									autoComplete='subject'
-									className='w-full bg-teal-100 dark:bg-teal-900 border-spacing-1 rounded-lg p-2'
+									className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
 									value={formData.subject}
 									onChange={handleChange}
 									required
@@ -147,7 +147,7 @@ export default function ContactUs() {
 									id='message'
 									name='message'
 									rows={3}
-									className='w-full bg-teal-100 dark:bg-teal-900 border-spacing-1 rounded-lg p-2'
+									className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
 									placeholder='Write a few sentences.'
 									value={formData.message}
 									onChange={handleChange}
@@ -161,7 +161,7 @@ export default function ContactUs() {
 						<Button
 							type='submit'
 							disabled={loading}
-							className='rounded-md bg-teal-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-teal-500'
+							className='rounded-md bg-purple-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-purple-500'
 						>
 							{loading ? (
 								<div className='flex'>
@@ -283,7 +283,7 @@ export default function ContactUs() {
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.3 }}
 					>
-						<div className='bg-teal-100 dark:bg-teal-900 p-10 rounded-lg flex flex-col'>
+						<div className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col'>
 							<p className='mb-2'>
 								Message sent Succesfully
 							</p>

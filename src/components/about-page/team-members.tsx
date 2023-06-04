@@ -46,7 +46,7 @@ const Team: React.FC<TeamProps> = ({ teamMembers }) => {
 						<div
 							key={index}
 							onClick={() => openModal(member)}
-							className='bg-teal-100 dark:bg-teal-800 rounded-lg p-6 shadow-md'
+							className='bg-purple-100 dark:bg-purple-800 rounded-lg p-6 shadow-md'
 						>
 							<Image
 								src={member.photo}

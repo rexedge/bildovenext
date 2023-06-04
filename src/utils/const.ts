@@ -1,10 +1,11 @@
 export const COMPANY_PROFILE = {
-	name: 'Smart Steps Financial',
-	tagline: 'Empowering Your Financial Future',
-	address: '8015 Barnes Ridge Ln, Houston TX, 77072',
-	phone: '+1-346-270-5671',
-	email: 'info@smartstepsfinance.com',
+	name: 'Bildove Financial',
+	tagline: 'Unlocking Your Financial Potential',
+	address: '332 Whitehurst Way, Columbia, South Carolina',
+	phone: '+1(803)-567-0753',
+	email: 'bildovefinancial@gmail.com',
 	calendly: 'https://calendly.com/ssfinance',
+	logo: '',
 };
 
 export const CAROUSEL_IMAGES = [
@@ -14,7 +15,7 @@ export const CAROUSEL_IMAGES = [
 		alt: 'Image 1',
 		title: COMPANY_PROFILE.name,
 		description: COMPANY_PROFILE.tagline,
-		buttonText: 'Book consultation',
+		buttonText: 'Book Appointment',
 	},
 	{
 		id: '2',
@@ -22,10 +23,61 @@ export const CAROUSEL_IMAGES = [
 		alt: 'Image 2',
 		title: COMPANY_PROFILE.name,
 		description: COMPANY_PROFILE.tagline,
-		buttonText: 'Book consultation',
+		buttonText: 'Book Appointment',
 	},
 ];
 
+export const INTRO_TEXT = `At ${COMPANY_PROFILE.name} Services, we
+							understand that financial well-being is a top
+							priority for individuals and families. Our
+							comprehensive approach focuses on empowering
+							you with the insights and strategies needed
+							to make informed financial decisions. Whether
+							you're seeking to protect your income,
+							grow your wealth, or plan for a secure
+							retirement, we're here to guide you
+							every step of the way.`;
+export const WELCOME_TEXT = `Welcome to ${COMPANY_PROFILE.name} Services, your
+					trusted partner in achieving financial security and
+					building a prosperous future. We are dedicated to
+					providing you with the knowledge, tools, and products
+					necessary to navigate the complexities of the financial
+					world.`;
+export const TESTIMONIES = `I am grateful for the expertise and support provided by the team at BrightStar Financial Solutions. As a trusted provider of comprehensive financial services, they have helped me navigate complex financial decisions and achieve my long-term goals. With their guidance, I have gained a greater understanding of how to manage my finances and secure a prosperous future for myself and my family. Thank you, BrightStar Financial Solutions, for your unwavering commitment to my financial success.`;
+
+export const WHY_CHOOSE_US = [
+	{
+		id: 0,
+		title: `Expertise and Guidance`,
+		description: `Our team of financial experts brings years of
+						industry experience to help you navigate the
+						ever-changing financial landscape. We stay
+						up-to-date with the latest trends, regulations,
+						and strategies, ensuring that you receive accurate
+						and personalized advice tailored to your unique
+						needs.`,
+	},
+	{
+		id: 1,
+		title: `Comprehensive Services`,
+		description: `From understanding the rules of money to protecting
+					your assets and planning for the future, we cover a
+					wide range of topics. Our services encompass income
+					protection, tax advantages, legacy planning, and more.
+					Whatever your financial goals may be, we have the
+					expertise and resources to help you achieve them.`,
+	},
+	{
+		id: 2,
+		title: `Tailored Solutions`,
+		description: `We recognize that every individual&apos;s financial
+					situation is unique. That&apos;s why we offer
+					personalized solutions that align with your specific
+					needs, risk tolerance, and aspirations. Our goal is to
+					create a customized roadmap that leads you towards
+					financial success and peace of mind.`,
+	},
+];
 export const TEAM_MEMBERS = [
 	{
 		name: 'Kayode Atiba',

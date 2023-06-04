@@ -67,7 +67,7 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 			className={`h-1 md:h-2 lg:h3 w-5 md:w-8 lg:w-12 mx-1 z-20 cursor-pointer rounded-full transition duration-300 ${
 				index === currentIndex
 					? 'bg-black dark:bg-white'
-					: 'bg-white dark:bg-teal-500'
+					: 'bg-white dark:bg-purple-500'
 			}`}
 			onClick={() => {
 				setDirection(index > currentIndex ? 1 : -1);
@@ -82,7 +82,7 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 			{nav && (
 				<>
 					<div
-						className='absolute top-0 left-0 z-10 flex items-center justify-center w-8 h-full text-teal-500 dark:text-white transition duration-300 bg-white dark:bg-teal-500 bg-opacity-70 hover:bg-opacity-90 cursor-pointer'
+						className='absolute top-0 left-0 z-10 flex items-center justify-center w-8 h-full text-purple-500 dark:text-white transition duration-300 bg-white dark:bg-purple-500 bg-opacity-70 hover:bg-opacity-90 cursor-pointer'
 						onClick={handlePrev}
 					>
 						<svg
@@ -98,7 +98,7 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 						</svg>
 					</div>
 					<div
-						className='absolute top-0 right-0 z-10 flex items-center justify-center w-8 h-full text-teal-500 dark:text-white transition duration-300 bg-white dark:bg-teal-500 bg-opacity-70 hover:bg-opacity-90 cursor-pointer'
+						className='absolute top-0 right-0 z-10 flex items-center justify-center w-8 h-full text-purple-500 dark:text-white transition duration-300 bg-white dark:bg-purple-500 bg-opacity-70 hover:bg-opacity-90 cursor-pointer'
 						onClick={handleNext}
 					>
 						<svg
@@ -155,7 +155,7 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 							{images[currentIndex].buttonText && (
 								<Button
 									href={COMPANY_PROFILE.calendly}
-									className='shrink-0 text-sm py-2 px-4 dark:bg-teal-900 bg-teal-200 text-black dark:text-white hover:bg-teal-400 dark:hover:bg-teal-700 rounded-lg cursor-pointer'
+									className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-200 text-black dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 								>
 									{images[currentIndex].buttonText}
 								</Button>

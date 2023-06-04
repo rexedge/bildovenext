@@ -27,7 +27,7 @@ const Hero: React.FC<HeroSectionProps> = ({ title, description, image }) => {
 				<p className='text-lg mb-8'>{description}</p>
 				<Button
 					href={COMPANY_PROFILE.calendly}
-					className='shrink-0 text-sm py-2 px-4 dark:bg-teal-900 bg-teal-200 text-black dark:text-white hover:bg-teal-400 dark:hover:bg-teal-700 rounded-lg cursor-pointer'
+					className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-200 text-black dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 				>
 					Get Started
 				</Button>
