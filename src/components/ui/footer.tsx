@@ -18,7 +18,7 @@ const Footer = () => (
 							width={50}
 							alt=''
 							src={'/ssf.png'}
-							className='dark:invert'
+							className='invert'
 						/>
 					</Link>
 					<div className='my-3'>
@@ -118,7 +118,7 @@ const Footer = () => (
 			</div>
 			<hr className='my-6 border-gray-200' />
 			<div className='text-center'>
-				<Link href={'https://rexedge.xyz'}>
+				<Link href={'https://rexedge.site'}>
 					<p className=''>
 						&copy; {new Date().getFullYear()} Rex Edge Design
 						Studio. All rights reserved.

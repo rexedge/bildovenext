@@ -12,7 +12,7 @@ export default function page() {
 	return (
 		<main className='flex min-h-screen flex-col'>
 			<Hero
-				title='About Smart Steps'
+				title={`About ${COMPANY_PROFILE.name}`}
 				description={`Welcome to ${COMPANY_PROFILE.name} Services, a leading
 				provider of comprehensive financial solutions designed to
 				empower individuals and families on their journey to

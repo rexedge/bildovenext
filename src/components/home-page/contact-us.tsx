@@ -23,6 +23,7 @@ export default function ContactUs() {
 	const [formData, setFormData] = useState<FormData>(initialFormData);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [successModal, setSuccessModal] = useState<boolean>(false);
+	const [failureModal, setFailureModal] = useState<boolean>(false);
 
 	const handleChange = (
 		e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -54,7 +55,7 @@ export default function ContactUs() {
 
 		if (!response.ok) {
 			setLoading(false);
-			alert('message not sent');
+			setFailureModal(true);
 		}
 	};
 
@@ -277,23 +278,56 @@ export default function ContactUs() {
 			<AnimatePresence>
 				{successModal && (
 					<motion.div
-						className='fixed backdrop-blur-[2px] top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 z-50'
+						className='fixed backdrop-blur-[2px] top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-green-500 bg-opacity-20 z-50'
 						initial={{ opacity: 0, scale: 0 }}
 						animate={{ opacity: 1, scale: 1 }}
 						exit={{ opacity: 0, scale: 0 }}
 						transition={{ duration: 0.3 }}
 					>
-						<div className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col'>
+						<motion.div
+							className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							initial={{ opacity: 0, y: -1000 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -1000 }}
+							transition={{ duration: 0.3 }}
+						>
 							<p className='mb-2'>
-								Message sent Succesfully
+								Message sent Succesfully!!!
 							</p>
 							<Button
-								className='mt-4 outline outline-green-500'
+								className='mt-4 outline outline-green-500 bg-green-200 dark:bg-green-800 w-full'
 								onClick={() => setSuccessModal(false)}
 							>
 								Close
 							</Button>
-						</div>
+						</motion.div>
+					</motion.div>
+				)}
+			</AnimatePresence>
+			<AnimatePresence>
+				{failureModal && (
+					<motion.div
+						className='fixed backdrop-blur-[2px] top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-red-500 bg-opacity-20 z-50'
+						initial={{ opacity: 0, scale: 0 }}
+						animate={{ opacity: 1, scale: 1 }}
+						exit={{ opacity: 0, scale: 0 }}
+						transition={{ duration: 0.2 }}
+					>
+						<motion.div
+							className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							initial={{ opacity: 0, y: 1000 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: 1000 }}
+							transition={{ duration: 0.3, delay: 0.1 }}
+						>
+							<p className='mb-2'>Message not sent!!!</p>
+							<Button
+								className='mt-4 outline outline-red-500 bg-red-200 dark:bg-red-800 w-full'
+								onClick={() => setFailureModal(false)}
+							>
+								Close
+							</Button>
+						</motion.div>
 					</motion.div>
 				)}
 			</AnimatePresence>

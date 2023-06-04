@@ -4,39 +4,52 @@ export const COMPANY_PROFILE = {
 	address: '332 Whitehurst Way, Columbia, South Carolina',
 	phone: '+1(803)-567-0753',
 	email: 'bildovefinancial@gmail.com',
-	calendly: 'https://calendly.com/ssfinance',
-	logo: '',
+	calendly: 'https://calendly.com/bildovefinancial/one-one-one',
 };
 
 export const CAROUSEL_IMAGES = [
 	{
 		id: '1',
-		src: '/slide1.jpg',
+		src: '/homepage.jpg',
 		alt: 'Image 1',
 		title: COMPANY_PROFILE.name,
 		description: COMPANY_PROFILE.tagline,
 		buttonText: 'Book Appointment',
 	},
+	// {
+	// 	id: '2',
+	// 	src: '/pocket.jpg',
+	// 	alt: 'Image 2',
+	// 	title: COMPANY_PROFILE.name,
+	// 	description: COMPANY_PROFILE.tagline,
+	// 	buttonText: 'Book Appointment',
+	// },
 	{
-		id: '2',
-		src: '/slide2.jpg',
-		alt: 'Image 2',
+		id: '3',
+		src: '/slide1.jpg',
+		alt: 'Image 3',
 		title: COMPANY_PROFILE.name,
 		description: COMPANY_PROFILE.tagline,
 		buttonText: 'Book Appointment',
 	},
 ];
 
-export const INTRO_TEXT = `At ${COMPANY_PROFILE.name} Services, we
-							understand that financial well-being is a top
-							priority for individuals and families. Our
-							comprehensive approach focuses on empowering
-							you with the insights and strategies needed
-							to make informed financial decisions. Whether
-							you're seeking to protect your income,
-							grow your wealth, or plan for a secure
-							retirement, we're here to guide you
-							every step of the way.`;
+export const CONTACT_HERO = {
+	image: '/contactus.jpg',
+	title: 'Contact Us',
+	description: `We're excited to hear from you! Whether you
+				have questions, inquiries, or would like to schedule a
+				consultation, our team is here to assist you. You can reach
+				us through any of the below methods`,
+};
+
+export const INTRO_TEXT = {
+	image: '/pocket.jpg',
+	description: `${COMPANY_PROFILE.name} Services has seasoned licensed financial professionals who provide financial literacy to clients at nocost. We are licensed in all 50 states and the U.S. territories.
+
+`,
+};
+
 export const WELCOME_TEXT = `Welcome to ${COMPANY_PROFILE.name} Services, your
 					trusted partner in achieving financial security and
 					building a prosperous future. We are dedicated to
@@ -49,46 +62,22 @@ export const TESTIMONIES = [
 		id: 0,
 		title: `John Smith`,
 		image: `/john.jpg`,
-		description: `"Thanks to Welcome to ${COMPANY_PROFILE.name} Services,
-				a leading provider of comprehensive financial solutions
-				designed to empower individuals and families on their
-				journey to financial success. With years of industry
-				experience and a passion for helping others, our team is
-				committed to guiding you towards a secure and prosperous
-				future. Services, I've gained a deeper understanding of
-				how to protect my income and make the most of my financial
-				opportunities. Their guidance has been invaluable."`,
+		description: `"Working with ${COMPANY_PROFILE.name} Services was a great experience because they provided exceptional customer service. From the very beginning, they took the time to understand my financial goals and needs, and then tailored their services to meet those specific requirements. The team at ${COMPANY_PROFILE.name} Services was always available to answer my questions and provide guidance throughout the entire process."`,
 	},
 	{
 		id: 1,
-		title: `Comprehensive Services`,
-		image: `/john.jpg`,
-		description: `"I highly recommend Welcome to ${COMPANY_PROFILE.name}
-				Services, a leading provider of comprehensive financial
-				solutions designed to empower individuals and families on
-				their journey to financial success. With years of industry
-				experience and a passion for helping others, our team is
-				committed to guiding you towards a secure and prosperous
-				future. Services to anyone seeking financial security and
-				expert advice. Their personalized approach and comprehensive
-				services have exceeded my expectations."`,
+		title: `Alexa Judge`,
+		image: `/alexa.jpg`,
+		description: `"Working with ${COMPANY_PROFILE.name} Services was a wonderful experience because they offered top-notch customer service. Right from the start, they took the time to comprehend my financial objectives and necessities, and then customized their services to fulfill those precise requirements. The team at ${COMPANY_PROFILE.name} Services was always accessible to answer my inquiries and provide direction throughout the entire process."`,
 	},
 	{
 		id: 2,
-		title: `Tailored Solutions`,
-		image: `/john.jpg`,
-		description: `Thanks to Welcome to ${COMPANY_PROFILE.name} Services,
-				a leading provider of comprehensive financial solutions
-				designed to empower individuals and families on their
-				journey to financial success. With years of industry
-				experience and a passion for helping others, our team is
-				committed to guiding you towards a secure and prosperous
-				future. Services, I've learned how to create a solid
-				investment portfolio and plan for my future. Their expertise
-				has been essential in helping me achieve my financial
-				goals.`,
+		title: `Emily Bricks`,
+		image: `/emily.jpg`,
+		description: `"${COMPANY_PROFILE.name} Services provided excellent customer service by understanding my financial goals and tailoring their services accordingly. Their team was always available to answer my questions and provide guidance."`,
 	},
 ];
+
 export const WHY_CHOOSE_US = [
 	{
 		id: 0,
@@ -125,10 +114,10 @@ export const WHY_CHOOSE_US = [
 
 export const TEAM_MEMBERS = [
 	{
-		name: 'Kayode Atiba',
+		name: 'Foluke Oladipo',
 		position: 'Financial Advisor',
 		bio: 'Kayode Atiba is a seasoned financial advisor with over 10 years of experience...',
-		photo: '/kayode.jpg',
+		photo: '/foluke.jpg',
 		age: 21,
 	},
 	{
