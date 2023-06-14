@@ -141,21 +141,21 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 				/>
 				<div className='absolute flex items-center justify-center bottom-0 top-0 right-0 left-0 z-30 p-4 text-white'>
 					<div className='absolute z-10 left-0 right-0 top-0 bottom-0 bg-black bg-opacity-40 flex items-center justify-center'>
-						<div className='text-center'>
+						<div className='text-center max-w-3xl'>
 							{images[currentIndex].title && (
 								<h1 className='font-bold text-2xl md:text-5xl lg:text-7xl mb-3 md:mb-6 lg:mb-9'>
 									{images[currentIndex].title}
 								</h1>
 							)}
 							{images[currentIndex].description && (
-								<p className='mb-3 md:mb-6 lg:mb-9 md:text-2xl lg:text-4xl'>
+								<p className='mb-3 md:mb-6 lg:mb-9 md:text-xl lg:text-2xl'>
 									{images[currentIndex].description}
 								</p>
 							)}
 							{images[currentIndex].buttonText && (
 								<Button
 									href={COMPANY_PROFILE.calendly}
-									className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-200 text-black dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
+									className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-500 text-white dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 								>
 									{images[currentIndex].buttonText}
 								</Button>

@@ -42,7 +42,7 @@ export default async function ContactAPI(req, res) {
 			<p>Dear ${name},</p>
 			<p>Thank you for contacting us. We have received your message and a representative will get back to you shortly.</p>
 			<p>Best regards,</p>
-			<p>The Smart Steps Solution Team</p>
+			<p>The Bildove Team</p>
 		`;
 
 		const acknowledgmentMail = await transporter.sendMail({

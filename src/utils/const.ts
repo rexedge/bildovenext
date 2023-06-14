@@ -13,8 +13,8 @@ export const CAROUSEL_IMAGES = [
 		src: '/homepage.jpg',
 		alt: 'Image 1',
 		title: COMPANY_PROFILE.name,
-		description: COMPANY_PROFILE.tagline,
-		buttonText: 'Book Appointment',
+		description: `Great news! Now you can ensure the safety of your home and finances with a reliable source that protects against unexpected death and disability.`,
+		buttonText: 'Protect My Family Today',
 	},
 	// {
 	// 	id: '2',
@@ -22,15 +22,15 @@ export const CAROUSEL_IMAGES = [
 	// 	alt: 'Image 2',
 	// 	title: COMPANY_PROFILE.name,
 	// 	description: COMPANY_PROFILE.tagline,
-	// 	buttonText: 'Book Appointment',
+	// 	buttonText: 'Protect My Family Today',
 	// },
 	{
 		id: '3',
 		src: '/slide1.jpg',
 		alt: 'Image 3',
 		title: COMPANY_PROFILE.name,
-		description: COMPANY_PROFILE.tagline,
-		buttonText: 'Book Appointment',
+		description: `Great news! Now there's a reliable solution to safeguard your home loan and earnings from unexpected death or disability.`,
+		buttonText: 'Protect My Family Today',
 	},
 ];
 
