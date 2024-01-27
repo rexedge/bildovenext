@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
-import Button from './button';
 import { COMPANY_PROFILE } from '@/utils/const';
+import { Button } from './button';
 
 export default function NavBar() {
 	const [isMenuOpen, setMenuOpen] = useState(false);
@@ -122,9 +122,11 @@ export default function NavBar() {
 								CONTACT
 							</Link>
 							<Button
-								href={COMPANY_PROFILE.calendly}
+							asChild
+								
 								className='shrink-0 py-2 px-4 dark:bg-purple-900 bg-purple-200 hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 							>
+								<Link href={COMPANY_PROFILE.calendly}></Link>
 								BOOK CONSULTATION
 							</Button>
 						</div>

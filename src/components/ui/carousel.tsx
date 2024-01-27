@@ -2,8 +2,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import Button from './button';
 import { COMPANY_PROFILE } from '@/utils/const';
+import { Button } from './button';
+import Link from 'next/link';
 
 interface ImageObject {
 	id: string;
@@ -154,9 +155,10 @@ const Carousel = ({ images, nav = false, pagination = true }: Props) => {
 							)}
 							{images[currentIndex].buttonText && (
 								<Button
-									href={COMPANY_PROFILE.calendly}
+									
 									className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-500 text-white dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 								>
+									<Link href={COMPANY_PROFILE.calendly}></Link>
 									{images[currentIndex].buttonText}
 								</Button>
 							)}

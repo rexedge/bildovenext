@@ -1,7 +1,7 @@
 'use client';
 import ContactUs from '@/components/home-page/contact-us';
 import Testimonials from '@/components/home-page/testimonials';
-import Button from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Carousel from '@/components/ui/carousel';
 import {
 	CAROUSEL_IMAGES,
@@ -11,6 +11,7 @@ import {
 	WHY_CHOOSE_US,
 } from '@/utils/const';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
 	return (
@@ -65,9 +66,10 @@ export default function Home() {
 				</div>
 				<div className='text-center flex flex-col items-center'>
 					<Button
-						href={COMPANY_PROFILE.calendly}
+						
 						className='mb-10 outline bg-purple-100 dark:bg-purple-900'
 					>
+						<Link href={COMPANY_PROFILE.calendly}></Link>
 						GET STARTED
 					</Button>
 					<div className='text-sm max-w-[500px] mt-10'>

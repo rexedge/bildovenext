@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from './button';
 import { COMPANY_PROFILE } from '@/utils/const';
+import { Button } from './button';
+import Link from 'next/link';
 
 interface HeroSectionProps {
 	title: string;
@@ -28,9 +29,10 @@ const Hero: React.FC<HeroSectionProps> = ({ title, description, image }) => {
 					{description}
 				</p>
 				<Button
-					href={COMPANY_PROFILE.calendly}
+					
 					className='shrink-0 text-sm py-2 px-4 dark:bg-purple-900 bg-purple-200 text-black dark:text-white hover:bg-purple-400 dark:hover:bg-purple-700 rounded-lg cursor-pointer'
 				>
+					<Link href={COMPANY_PROFILE.calendly}></Link>
 					Get Started
 				</Button>
 			</div>

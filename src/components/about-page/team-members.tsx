@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import Button from '../ui/button';
+import { Button } from '../ui/button';
 
 interface TeamMember {
 	name: string;

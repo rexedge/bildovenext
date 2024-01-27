@@ -2,8 +2,8 @@
 import { COMPANY_PROFILE } from '@/utils/const';
 import FormatAddress from '@/utils/format-address';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
-import Button from '../ui/button';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Button } from '../ui/button';
 
 interface FormData {
 	name: string;
