@@ -1,10 +1,9 @@
 'use client';
 import ContactUs from '@/components/home-page/contact-us';
+import BCarousel from '@/components/home-page/home-carousel';
 import Testimonials from '@/components/home-page/testimonials';
 import { Button } from '@/components/ui/button';
-import Carousel from '@/components/ui/carousel';
 import {
-	CAROUSEL_IMAGES,
 	COMPANY_PROFILE,
 	INTRO_TEXT,
 	WELCOME_TEXT,
@@ -16,11 +15,8 @@ import Link from 'next/link';
 export default function Home() {
 	return (
 		<main className='flex min-h-screen flex-col'>
-			<Carousel
-				images={CAROUSEL_IMAGES}
-				pagination={false}
-			/>
-			<section className='px-10 py-20 bg-purple-100 dark:bg-purple-900'>
+			<BCarousel />
+			<section className='px-10 py-20 bg-purple-100'>
 				<div className='text-lg font-bold italic text-center'>
 					{WELCOME_TEXT}
 				</div>
@@ -44,14 +40,14 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className='px-5 md:px-10 py-20 bg-purple-100 dark:bg-purple-900 grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+			<section className='px-5 md:px-10 py-20 bg-purple-100  grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
 				<div className='md:col-span-2 lg:col-span-3 text-center text-2xl lg:text-3xl font-bold mb-5 lg:mb-10'>
 					WHY CHOOSE US
 				</div>
 				{WHY_CHOOSE_US.map((why, index) => (
 					<div
 						key={index}
-						className='md:col-span-1 bg-white dark:bg-black p-5 rounded-lg mb-5 text-center'
+						className='md:col-span-1 bg-white p-5 rounded-lg mb-5 text-center'
 					>
 						<p className='font-bold text-lg uppercase mb-3'>
 							{why.title}
@@ -65,10 +61,7 @@ export default function Home() {
 					Ready to Take Control of Your Financial Future?
 				</div>
 				<div className='text-center flex flex-col items-center'>
-					<Button
-						
-						className='mb-10 outline bg-purple-100 dark:bg-purple-900'
-					>
+					<Button className='mb-10 outline bg-purple-100 '>
 						<Link href={COMPANY_PROFILE.calendly}></Link>
 						GET STARTED
 					</Button>

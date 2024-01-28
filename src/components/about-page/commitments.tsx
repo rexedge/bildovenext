@@ -3,7 +3,7 @@ import React from 'react';
 
 const Commitment: React.FC = () => {
 	return (
-		<section className='bg-purple-100 dark:bg-purple-800 py-20 px-4'>
+		<section className='bg-purple-100 py-20 px-4'>
 			<h2 className='text-4xl font-bold mb-4 text-center'>
 				Our Commitment
 			</h2>
@@ -11,7 +11,7 @@ const Commitment: React.FC = () => {
 				{COMMITMENT_STATEMENTS.map((statement, index) => (
 					<div
 						key={index}
-						className='bg-white dark:bg-black p-4 rounded shadow'
+						className='bg-white  p-4 rounded shadow'
 					>
 						<p>{statement}</p>
 					</div>

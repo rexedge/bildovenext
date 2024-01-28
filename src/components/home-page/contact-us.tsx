@@ -85,7 +85,7 @@ export default function ContactUs() {
 										id='name'
 										name='name'
 										placeholder='Name'
-										className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
+										className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
 										value={formData.name}
 										onChange={handleChange}
 										required
@@ -107,7 +107,7 @@ export default function ContactUs() {
 										name='email'
 										placeholder='Enter Email'
 										autoComplete='email'
-										className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
+										className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
 										value={formData.email}
 										onChange={handleChange}
 										required
@@ -129,7 +129,7 @@ export default function ContactUs() {
 									name='subject'
 									placeholder='Enter subject'
 									autoComplete='subject'
-									className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
+									className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
 									value={formData.subject}
 									onChange={handleChange}
 									required
@@ -148,7 +148,7 @@ export default function ContactUs() {
 									id='message'
 									name='message'
 									rows={3}
-									className='w-full bg-purple-100 dark:bg-purple-900 border-spacing-1 rounded-lg p-2'
+									className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
 									placeholder='Write a few sentences.'
 									value={formData.message}
 									onChange={handleChange}
@@ -285,7 +285,7 @@ export default function ContactUs() {
 						transition={{ duration: 0.3 }}
 					>
 						<motion.div
-							className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							className='bg-purple-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
 							initial={{ opacity: 0, y: -1000 }}
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -1000 }}
@@ -295,7 +295,7 @@ export default function ContactUs() {
 								Message sent Succesfully!!!
 							</p>
 							<Button
-								className='mt-4 outline outline-green-500 bg-green-200 dark:bg-green-800 w-full'
+								className='mt-4 outline outline-green-500 bg-green-200  w-full'
 								onClick={() => setSuccessModal(false)}
 							>
 								Close
@@ -314,7 +314,7 @@ export default function ContactUs() {
 						transition={{ duration: 0.2 }}
 					>
 						<motion.div
-							className='bg-purple-100 dark:bg-purple-900 p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							className='bg-purple-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
 							initial={{ opacity: 0, y: 1000 }}
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: 1000 }}
@@ -322,7 +322,7 @@ export default function ContactUs() {
 						>
 							<p className='mb-2'>Message not sent!!!</p>
 							<Button
-								className='mt-4 outline outline-red-500 bg-red-200 dark:bg-red-800 w-full'
+								className='mt-4 outline outline-red-500 bg-red-200 w-full'
 								onClick={() => setFailureModal(false)}
 							>
 								Close

@@ -1,34 +1,52 @@
-'use client'
 import { ACCORDIONS } from '@/utils/const';
-import React, { useState } from "react";
-import AccordionItem from './accordionitem';
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from '../ui/accordion';
+import Link from 'next/link';
+import Image from 'next/image';
 
-
-
-export default function Accordion() {
-    const [open, setOpen] = useState(null); 
-
-	const toggle = (index:any) => {
-		setOpen(open === index ? null : index); 
-	};
-
+export default function BAccordion() {
 	return (
-		<div className='bg-primary h-full'>
-			<div className='max-w-[800px] lg:mx-10 md:mx-10 sm:mx-auto p-4'>
-				{ACCORDIONS.map((Accordion, index) => (
-					<AccordionItem
-						key={index}
-						open={index === open}
-						title={Accordion.title}
-						text={Accordion.text}
-						link= {Accordion.link}
-						linkText={Accordion.linkText}
-						contText={Accordion.contText}
-						image={Accordion.image}
-						toggle={() => toggle(index)}
-					/>
-				))}
-			</div>
-		</div>
+		<Accordion
+			type='single'
+			collapsible
+			className='mx-auto max-w-xl w-full '
+		>
+			{ACCORDIONS.map((a, i) => (
+				<AccordionItem
+					key={i}
+					value={a.title}
+					className='border-0 mb-2'
+				>
+					<AccordionTrigger className='bg-purple-200 py-[25px] px-[50px] flex justify-between items-center cursor-pointer rounded-2xl'>
+						{a.title}
+					</AccordionTrigger>
+					<AccordionContent className='py-[25px] px-[50px]'>
+						{a.text}{' '}
+						{a.link && a.link !== '' && (
+							<Link
+								className={'text-purple-900'}
+								href={a.link}
+							>
+								{a.linkText}
+							</Link>
+						)}{' '}
+						{a.contText}
+						{a.image && (
+							<Image
+								width={100}
+								height={100}
+								src={a.image}
+								alt='emiily'
+								className='rounded-full '
+							/>
+						)}
+					</AccordionContent>
+				</AccordionItem>
+			))}
+		</Accordion>
 	);
 }
