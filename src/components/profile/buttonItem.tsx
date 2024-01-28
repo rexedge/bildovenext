@@ -12,16 +12,12 @@ export default function ButtonItem({
 	href: string;
 }) {
 	return (
-		<div className='bg-purple-200  py-[25px] px-[50px] flex justify-center items-center cursor-pointer rounded-2xl mb-2'>
-			<Link
-				href={href}
-				className='flex gap-1'
-			>
-				<p className='text-base text-center font-normal lg:text-lg md:text-lg sm:text-sm '>
-					{title}
-				</p>
-				{icon}
-			</Link>
-		</div>
+		<Link
+			href={href}
+			className='flex gap-1 bg-teal-200  py-[25px] px-[50px] justify-between items-center cursor-pointer rounded-2xl mb-2'
+		>
+			<p className=''>{title}</p>
+			{icon}
+		</Link>
 	);
 }

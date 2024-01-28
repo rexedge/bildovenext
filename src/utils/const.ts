@@ -1,10 +1,10 @@
-import { CalculatorIcon, CalendarIcon, UsersIcon } from "./svgs";
+import { CalculatorIcon, CalendarIcon, UsersIcon } from './svgs';
 
 export const COMPANY_PROFILE = {
 	name: 'Bildove Financial',
 	tagline: 'Unlocking Your Financial Potential',
 	address: '332 Whitehurst Way, Columbia, South Carolina',
-	phone: '+1(803)-567-0753',
+	phone: '+1(803)-250-1030', //18032501030
 	email: 'bildovefinancial@gmail.com',
 	calendly: 'https://calendly.com/bildovefinancial/one-one-one',
 };
@@ -18,14 +18,14 @@ export const CAROUSEL_IMAGES = [
 		description: `Great news! Now you can ensure the safety of your home and finances with a reliable source that protects against unexpected death and disability.`,
 		buttonText: 'Protect My Family Today',
 	},
-	// {
-	// 	id: '2',
-	// 	src: '/pocket.jpg',
-	// 	alt: 'Image 2',
-	// 	title: COMPANY_PROFILE.name,
-	// 	description: COMPANY_PROFILE.tagline,
-	// 	buttonText: 'Protect My Family Today',
-	// },
+	{
+		id: '2',
+		src: '/pocket.jpg',
+		alt: 'Image 2',
+		title: COMPANY_PROFILE.name,
+		description: COMPANY_PROFILE.tagline,
+		buttonText: 'Protect My Family Today',
+	},
 	{
 		id: '3',
 		src: '/slide1.jpg',
@@ -226,75 +226,62 @@ export const PRODUCTS = [
 			'With our comprehensive range of products and informative content, we are committed to empowering you with the knowledge and tools necessary to make informed financial decisions and secure your financial future.',
 	},
 ];
-export const ACCORDIONS: IAccordion[] =[
+
+export const ACCORDIONS: IAccordion[] = [
 	{
-		title: "About Jose Graxirena?",
-		text: "Jose Graxirena is a Field Underwriter and Life Insurance Broker at.Our agency specializes in a range of insurance products, including mortgage protection life insurance, final expense life insurance, universal life policies for retirement planning, and fixed index annuities for retirement protection.As a broker, I am appointed and contracted with over ten “A” rated financial services companies, this allows me to find the most competitive rates for the families I help serve & protect." ,
-		linkText: 'VerifiedAgent.US',
-		link: 'https://google.com/',
-		contText:" Profile 🇺🇸",
+		title: 'About Foluke Oladipo?',
+		text: 'Foluke Oladipo is  a Licensed Financial Professional at Bildove Financial Services. With a passion for helping individuals and families achieve financial success, I specialize in providing personalized financial solutions tailored to your unique needs and goals.',
+		linkText: 'Bildove ',
+		link: '/',
+		contText:
+			'helps people across the country find the life insurance and retirement solutions they need to protect their families and their futures. We have partnered with industry leading carriers to bring our agents a portfolio of products that they can be proud to offer their clients. Our agents follow-up with families that have requested assistance and work with them to create a solution that best fits their needs and budget.',
 		image: '/emily.jpg',
 	},
-
 	{
-		title: "About",
-		text: "helps people across the country find the life insurance and retirement solutions they need to protect their families and their futures. We have partnered with industry leading carriers to bring our agents a portfolio of products that they can be proud to offer their clients. Our agents follow-up with families that have requested assistance and work with them to create a solution that best fits their needs and budget.",
+		title: 'Our Carriers',
+		text: 'We put our clients first by offering multiple options for coverage through several top carriers. Our carriers specialize in helping clients with pre-existing conditions so we can protect every client we meet with.',
+		// image: '/emily.jpg',
+	},
+	{
+		title: 'Final Expense & Burial Coverage',
+		text: "Final expense insurance is an important consideration for anyone looking to provide for their loved ones and alleviate the financial burden of end-of-life expenses. These expenses can include medical bills, funeral costs, and outstanding debts, and can add up quickly, leaving loved ones with the added stress of figuring out how to pay for them.We understand the importance of this coverage and are dedicated to helping our clients find the right policy at an affordable rate. With our extensive experience in the industry, we have the knowledge and expertise to create personalized policies that meet your specific needs and budget. Our brokerage works with a wide range of insurance providers to find the most competitive rates for our clients. Whether you're looking for coverage for yourself or a loved one, we can help you find a policy that provides the peace of mind you need, knowing that your loved ones will be taken care.If you would like to know more about how to choose the correct policy at the most affordable rate, I recently wrote an ebook called",
+		// linkText: 'Final Expense Made Simple.',
+		// link: 'https://google.com/',
 	},
 
 	{
-		title: "Our Carriers",
-		text:"We put our clients first by offering multiple options for coverage through several top carriers. Our carriers specialize in helping clients with pre-existing conditions so we can protect every client we meet with.",
-		image: '/emily.jpg',
-	},
-
-	{
-		title: "Final Expense & Burial Coverage",
-		text:"Final expense insurance is an important consideration for anyone looking to provide for their loved ones and alleviate the financial burden of end-of-life expenses. These expenses can include medical bills, funeral costs, and outstanding debts, and can add up quickly, leaving loved ones with the added stress of figuring out how to pay for them.We understand the importance of this coverage and are dedicated to helping our clients find the right policy at an affordable rate. With our extensive experience in the industry, we have the knowledge and expertise to create personalized policies that meet your specific needs and budget. Our brokerage works with a wide range of insurance providers to find the most competitive rates for our clients. Whether you're looking for coverage for yourself or a loved one, we can help you find a policy that provides the peace of mind you need, knowing that your loved ones will be taken care.If you would like to know more about how to choose the correct policy at the most affordable rate, I recently wrote an ebook called",
-		linkText: 'Final Expense Made Simple.',
-		link: 'https://google.com/',
-		image: '/emily.jpg',
-	},
-
-	{
-		title: "Mortgage Protection",
+		title: 'Mortgage Protection',
 		text: "Your home is more than just a structure, it's a place where you create cherished memories and share them with the people you love. It's where you build a life, and it's where you want to feel safe and secure. That's why it's so important to protect your home and your loved ones.We understand the importance of protecting families and we have over 20 years of experience in helping people like you find the right mortgage protection policy. Our policy can protect your mortgage payments in case of critical illness, serious injury or even death, so your loved ones can keep living in the home you've built together without worrying about financial burden.As an independent brokerage, we have the freedom to design a policy that suits your specific needs and budget. We don't have to push a certain product, instead, we can offer you a policy with only the features that are important to you and at a competitive rate.If you would like to know more about how to find the correct policy to protect your home and loved ones, I recently wrote an Ebook called ",
-		linkText: "Mortgage Protection Made Simple.",
-		link: 'https://google.com/',
-		image: '/emily.jpg'
+		// linkText: 'Mortgage Protection Made Simple.',
+		// link: 'https://google.com/',
 	},
 
 	{
-		title: "Life Insurance",
-		text:"Take a moment and really think about the people in your life that matter. You’d do anything for them, and odds are you already are, by working hard and doing your part to provide them with a life that’s comfortable. Even after you’ve passed on, there are still steps you can take to ensure they’re taken care of.We understand that the greatest gift you can give someone is the gift of stability. The right life insurance policy can provide exactly that. With more than 20 years of experience, we know that everyone has different needs, and we’re experts in crafting precisely the right policy for each and every client. Additionally, since we aren’t affiliated with a major insurance carrier, you never have to worry about being pushed into buying policies with features you’ll never need. Our flexibility allows us to cherry-pick just the features you need, and at pricing that’s surprisingly affordable.After your policy has been activated, we’re still here to help. From emergencies to quick questions, our team is easy to reach, knowledgeable, and helpful.",
-		image: '/emily.jpg',
+		title: 'Life Insurance',
+		text: 'Take a moment and really think about the people in your life that matter. You’d do anything for them, and odds are you already are, by working hard and doing your part to provide them with a life that’s comfortable. Even after you’ve passed on, there are still steps you can take to ensure they’re taken care of.We understand that the greatest gift you can give someone is the gift of stability. The right life insurance policy can provide exactly that. With more than 20 years of experience, we know that everyone has different needs, and we’re experts in crafting precisely the right policy for each and every client. Additionally, since we aren’t affiliated with a major insurance carrier, you never have to worry about being pushed into buying policies with features you’ll never need. Our flexibility allows us to cherry-pick just the features you need, and at pricing that’s surprisingly affordable.After your policy has been activated, we’re still here to help. From emergencies to quick questions, our team is easy to reach, knowledgeable, and helpful.',
 	},
 	{
-		title: "Annuities & Retirement",
-		text:"For most people, the American Dream can be summed up into three parts. First, you go to college or find yourself a career where you can have a future. Second, while you’re working for the next several years, you’re putting money away consistently. Third, you retire, live comfortably on your saved funds, and thoroughly enjoy your golden years. The above paragraph seems pretty straightforward. However, in order to realize your own American Dream, you need a plan that makes sense, and a smart team helping you make it happen.More than two decades of experience is put to work helping you find the right retirement plans that use annuities and universal life policies. Wherever you are in your professional and personal journey, we’ll help you take the right steps toward protecting your assets, preparing for possible emergencies and medical problems, and creating a financial plan that allows you to maintain your standard of living. Since your financial goals are as unique as you are, we’ll help you build a policy that’s personalized. Once that’s done, we make it a point to always be available to answer all your questions and help whenever we can.",
-		image: '/emily.jpg',
+		title: 'Annuities & Retirement',
+		text: 'For most people, the American Dream can be summed up into three parts. First, you go to college or find yourself a career where you can have a future. Second, while you’re working for the next several years, you’re putting money away consistently. Third, you retire, live comfortably on your saved funds, and thoroughly enjoy your golden years. The above paragraph seems pretty straightforward. However, in order to realize your own American Dream, you need a plan that makes sense, and a smart team helping you make it happen.More than two decades of experience is put to work helping you find the right retirement plans that use annuities and universal life policies. Wherever you are in your professional and personal journey, we’ll help you take the right steps toward protecting your assets, preparing for possible emergencies and medical problems, and creating a financial plan that allows you to maintain your standard of living. Since your financial goals are as unique as you are, we’ll help you build a policy that’s personalized. Once that’s done, we make it a point to always be available to answer all your questions and help whenever we can.',
 	},
 	{
-		title: "Infinite Banking & Debt Free Planning",
-		text:"Infinite banking refers to a process by which an individual becomes his or her own banker. The infinite banking concept was created by Nelson Nash. In his book, “Becoming Your Own Banker,” Nash talks about the use of whole life insurance policies that distribute dividends and how owning such policies allows individuals to dictate the cash flow in their lives by borrowing against/from themselves instead of depending on banks or lenders for loans.The amount you need to start infinite banking will depend on your life insurance policy provider. Age may affect the cost of monthly premiums, so it’s often best to start as early as possible. Since you can only borrow against the cash value savings portion, a large amount of money has to be contributed to the insurance policy over time before borrowing against it makes sense. Because of this, infinite banking may not always be a good solution for the average American.",
-		image: '/emily.jpg',
+		title: 'Infinite Banking & Debt Free Planning',
+		text: 'Infinite banking refers to a process by which an individual becomes his or her own banker. The infinite banking concept was created by Nelson Nash. In his book, “Becoming Your Own Banker,” Nash talks about the use of whole life insurance policies that distribute dividends and how owning such policies allows individuals to dictate the cash flow in their lives by borrowing against/from themselves instead of depending on banks or lenders for loans.The amount you need to start infinite banking will depend on your life insurance policy provider. Age may affect the cost of monthly premiums, so it’s often best to start as early as possible. Since you can only borrow against the cash value savings portion, a large amount of money has to be contributed to the insurance policy over time before borrowing against it makes sense. Because of this, infinite banking may not always be a good solution for the average American.',
 	},
 ];
-export const BUTTON= [
+
+export const BUTTON = [
 	{
-		title:"Get Free Quote",
-		icon: CalculatorIcon,
-		href: 'https://www.google.com/',
-	},
-	{
-		title:"Schedule An Appointment",
+		title: 'Schedule An Appointment',
 		icon: CalendarIcon,
-		href: 'https://www.google.com/',
+		href: COMPANY_PROFILE.calendly,
 	},
 	{
-		title:"Join Our Team",
+		title: 'Join Our Team',
 		icon: UsersIcon,
-		href: 'https://www.cnn.com/',
-	}
-]
+		href: COMPANY_PROFILE.calendly,
+	},
+];
+
 export const MAP_LOCATION =
 	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3465.9938342847277!2d-95.61365442432094!3d29.690958435232204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640dd98fc971695%3A0x237fb12e3ffcfd4f!2s8015%20Barnes%20Ridge%20Ln%2C%20Houston%2C%20TX%2077072%2C%20USA!5e0!3m2!1sen!2sng!4v1685624248600!5m2!1sen!2sng';

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => (
-	<footer className='bg-purple-800 text-white py-8'>
+	<footer className='bg-teal-800 text-white py-8'>
 		<div className='mx-auto px-10'>
 			<div className='flex flex-wrap justify-between'>
 				<div className='w-full md:w-1/2 lg:w-2/5 mb-8 lg:mb-0'>

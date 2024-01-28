@@ -6,134 +6,114 @@ import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { COMPANY_PROFILE } from '@/utils/const';
 import { Button } from './button';
 import { AnimatePresence, motion } from 'framer-motion';
+import {
+	Sheet,
+	SheetContent,
+	SheetDescription,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+} from './sheet';
+import { Separator } from './separator';
 
 export default function NavBar() {
-	const [isMenuOpen, setMenuOpen] = useState(false);
-	const menuRef = useRef<HTMLButtonElement>(null);
-
-	const toggleMenu = () => {
-		setMenuOpen(!isMenuOpen);
-	};
-
-	const handleOutsideClick = (event: MouseEvent) => {
-		if (isMenuOpen === false) {
-			if (
-				menuRef.current &&
-				!menuRef.current.contains(event.target as Node)
-			) {
-				setMenuOpen(false);
-			}
-		}
-	};
-
-	useEffect(() => {
-		document.addEventListener('click', handleOutsideClick);
-
-		return () => {
-			document.removeEventListener('click', handleOutsideClick);
-		};
-	}, [handleOutsideClick]);
-
 	return (
-		<Fragment>
-			<div className='w-screen bg-purple-200 h-fit flex justify-between items-center py-2 px-10'>
+		<div className='w-screen bg-teal-200 h-fit flex justify-between items-center py-2 px-10'>
+			<Link
+				href='/'
+				className='shrink-0 font-bold h-12 w-12'
+			>
+				<Image
+					height={50}
+					width={50}
+					src={'/ssf.png'}
+					alt=''
+					className='h-full object-contain w-full'
+				/>
+			</Link>
+			<div className='lg:flex justify-center w-full hidden'>
 				<Link
-					href='/'
-					className='shrink-0 font-bold h-12 w-12'
+					className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all duration-500'
+					href={'/about'}
 				>
-					<Image
-						height={50}
-						width={50}
-						src={'/ssf.png'}
-						alt=''
-						className='h-full object-contain w-full'
-					/>
+					ABOUT
 				</Link>
-				<div className='lg:flex justify-center w-full hidden'>
+				<Link
+					className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all duration-500'
+					href={'/products'}
+				>
+					PRODUCTS
+				</Link>
+				<Link
+					className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all duration-500'
+					href={'/services'}
+				>
+					SERVICES
+				</Link>
+				<Link
+					className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all duration-500'
+					href={'/contact'}
+				>
+					CONTACT
+				</Link>
+			</div>
+			<Sheet>
+				<SheetTrigger asChild>
+					<Button
+						size={'icon'}
+						className='shrink-0 bg-teal-200 text-teal-800 hover:bg-teal-400 lg:hidden relative'
+					>
+						<MenuIcon className='h-6 w-6' />
+					</Button>
+				</SheetTrigger>
+				<SheetContent className='w-[400px] sm:w-[540px] bg-white pb-2 pt-10 px-4 flex flex-col gap-10 items-center '>
 					<Link
-						className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all duration-500'
+						href='/'
+						className='shrink-0 font-bold h-12 w-12'
+					>
+						<Image
+							height={50}
+							width={50}
+							src={'/ssf.png'}
+							alt=''
+							className='h-full object-contain w-full'
+						/>
+					</Link>
+					<Separator />
+					<Link
+						className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all'
 						href={'/about'}
 					>
 						ABOUT
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all'
 						href={'/products'}
 					>
 						PRODUCTS
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all'
 						href={'/services'}
 					>
 						SERVICES
 					</Link>
 					<Link
-						className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all duration-500'
+						className='py-2 px-4 hover:text-teal-800  hover:scale-110 transition-all'
 						href={'/contact'}
 					>
 						CONTACT
 					</Link>
-				</div>
-				<button
-					className='shrink-0 py-2 px-4  bg-purple-200 hover:bg-purple-400  rounded-lg cursor-pointer lg:hidden relative'
-					onClick={toggleMenu}
-					ref={menuRef}
-				>
-					{/* {isMenuOpen ? (
-						<XIcon className='h-6 w-6' />
-					) : ( */}
-					<MenuIcon className='h-6 w-6' />
-					{/* )} */}
-				</button>
-			</div>
-			<AnimatePresence>
-				{isMenuOpen && (
-					<motion.div
-						className={`relative top-0 left-0 bottom-0 right-0 z-[2000] overflow-hidden`}
-						initial={{ opacity: 0, y: -1000 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -1000 }}
-						transition={{ duration: 0.3 }}
+					<Button
+						asChild
+						className='shrink-0 py-2 px-4  bg-teal-200 hover:bg-teal-400  rounded-lg cursor-pointer'
 					>
-						<div className='bg-white py-2 px-4 flex flex-col gap-10 items-center w-screen h-screen'>
-							<Link
-								className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all'
-								href={'/about'}
-							>
-								ABOUT
-							</Link>
-							<Link
-								className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all'
-								href={'/products'}
-							>
-								PRODUCTS
-							</Link>
-							<Link
-								className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all'
-								href={'/services'}
-							>
-								SERVICES
-							</Link>
-							<Link
-								className='py-2 px-4 hover:text-purple-800  hover:scale-110 transition-all'
-								href={'/contact'}
-							>
-								CONTACT
-							</Link>
-							<Button
-								asChild
-								className='shrink-0 py-2 px-4  bg-purple-200 hover:bg-purple-400  rounded-lg cursor-pointer'
-							>
-								<Link
-									href={COMPANY_PROFILE.calendly}
-								></Link>
-								BOOK CONSULTATION
-							</Button>
-						</div>
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</Fragment>
+						<Link href={COMPANY_PROFILE.calendly}>
+							BOOK CONSULTATION
+						</Link>
+					</Button>
+				</SheetContent>
+			</Sheet>
+		</div>
 	);
 }

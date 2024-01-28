@@ -13,7 +13,7 @@ export default function BAccordion() {
 		<Accordion
 			type='single'
 			collapsible
-			className='mx-auto max-w-xl w-full '
+			className='w-full'
 		>
 			{ACCORDIONS.map((a, i) => (
 				<AccordionItem
@@ -21,14 +21,16 @@ export default function BAccordion() {
 					value={a.title}
 					className='border-0 mb-2'
 				>
-					<AccordionTrigger className='bg-purple-200 py-[25px] px-[50px] flex justify-between items-center cursor-pointer rounded-2xl'>
+					<AccordionTrigger className='bg-teal-200 py-[25px] px-[50px] flex justify-between items-center cursor-pointer rounded-2xl'>
 						{a.title}
 					</AccordionTrigger>
 					<AccordionContent className='py-[25px] px-[50px]'>
 						{a.text}{' '}
 						{a.link && a.link !== '' && (
 							<Link
-								className={'text-purple-900'}
+								className={
+									'text-teal-900 font-bold underline'
+								}
 								href={a.link}
 							>
 								{a.linkText}
@@ -37,11 +39,11 @@ export default function BAccordion() {
 						{a.contText}
 						{a.image && (
 							<Image
-								width={100}
-								height={100}
+								width={500}
+								height={500}
 								src={a.image}
 								alt='emiily'
-								className='rounded-full '
+								className='aspect-video w-full object-cover rounded-2xl mt-3'
 							/>
 						)}
 					</AccordionContent>

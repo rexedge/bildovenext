@@ -16,7 +16,7 @@ export default function Home() {
 	return (
 		<main className='flex min-h-screen flex-col'>
 			<BCarousel />
-			<section className='px-10 py-20 bg-purple-100'>
+			<section className='px-10 py-20 bg-teal-100'>
 				<div className='text-lg font-bold italic text-center'>
 					{WELCOME_TEXT}
 				</div>
@@ -40,7 +40,7 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			<section className='px-5 md:px-10 py-20 bg-purple-100  grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+			<section className='px-5 md:px-10 py-20 bg-teal-100  grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
 				<div className='md:col-span-2 lg:col-span-3 text-center text-2xl lg:text-3xl font-bold mb-5 lg:mb-10'>
 					WHY CHOOSE US
 				</div>
@@ -61,7 +61,7 @@ export default function Home() {
 					Ready to Take Control of Your Financial Future?
 				</div>
 				<div className='text-center flex flex-col items-center'>
-					<Button className='mb-10 outline bg-purple-100 '>
+					<Button className='mb-10 outline bg-teal-100 '>
 						<Link href={COMPANY_PROFILE.calendly}></Link>
 						GET STARTED
 					</Button>

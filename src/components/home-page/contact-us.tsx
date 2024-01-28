@@ -85,7 +85,7 @@ export default function ContactUs() {
 										id='name'
 										name='name'
 										placeholder='Name'
-										className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
+										className='w-full bg-teal-100  border-spacing-1 rounded-lg p-2'
 										value={formData.name}
 										onChange={handleChange}
 										required
@@ -107,7 +107,7 @@ export default function ContactUs() {
 										name='email'
 										placeholder='Enter Email'
 										autoComplete='email'
-										className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
+										className='w-full bg-teal-100  border-spacing-1 rounded-lg p-2'
 										value={formData.email}
 										onChange={handleChange}
 										required
@@ -129,7 +129,7 @@ export default function ContactUs() {
 									name='subject'
 									placeholder='Enter subject'
 									autoComplete='subject'
-									className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
+									className='w-full bg-teal-100  border-spacing-1 rounded-lg p-2'
 									value={formData.subject}
 									onChange={handleChange}
 									required
@@ -148,7 +148,7 @@ export default function ContactUs() {
 									id='message'
 									name='message'
 									rows={3}
-									className='w-full bg-purple-100  border-spacing-1 rounded-lg p-2'
+									className='w-full bg-teal-100  border-spacing-1 rounded-lg p-2'
 									placeholder='Write a few sentences.'
 									value={formData.message}
 									onChange={handleChange}
@@ -162,7 +162,7 @@ export default function ContactUs() {
 						<Button
 							type='submit'
 							disabled={loading}
-							className='rounded-md bg-purple-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-purple-500'
+							className='rounded-md bg-teal-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-teal-500'
 						>
 							{loading ? (
 								<div className='flex'>
@@ -285,7 +285,7 @@ export default function ContactUs() {
 						transition={{ duration: 0.3 }}
 					>
 						<motion.div
-							className='bg-purple-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							className='bg-teal-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
 							initial={{ opacity: 0, y: -1000 }}
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -1000 }}
@@ -314,7 +314,7 @@ export default function ContactUs() {
 						transition={{ duration: 0.2 }}
 					>
 						<motion.div
-							className='bg-purple-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
+							className='bg-teal-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center'
 							initial={{ opacity: 0, y: 1000 }}
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: 1000 }}

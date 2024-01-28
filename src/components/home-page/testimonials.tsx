@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Testimonials() {
 	return (
-		<section className='px-5 md:px-10 py-20 bg-purple-100 grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
+		<section className='px-5 md:px-10 py-20 bg-teal-100 grid md:grid-cols-2 lg:grid-cols-3 gap-10'>
 			<div className='md:col-span-2 lg:col-span-3 text-center text-2xl lg:text-3xl font-bold mb-5 lg:mb-10'>
 				TESTIMONIALS
 			</div>
