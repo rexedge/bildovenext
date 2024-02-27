@@ -119,8 +119,8 @@ export const WHY_CHOOSE_US = [
 export const TEAM_MEMBERS = [
   {
     name: "Foluke Oladipo",
-    position: "Lead Financial Advisor",
-    bio: "Foluke Oladipo is a seasoned financial advisor with over 10 years of experience...",
+    position: "Finance Advisor",
+    bio: "Foluke Oladipo is a licenced financial professional/field underwriter with years of experience...",
     photo: "/foluke.jpg",
     age: 56,
   },
@@ -132,7 +132,7 @@ export const TEAM_MEMBERS = [
     age: 45,
   },
   {
-    name: "Ayomide",
+    name: "Lilian Ndianefo",
     position: "Financial Advisor",
     bio: "Ayomide Ogunlana is a seasoned financial advisor with over 10 years of experience...",
     photo: "/ayo.jpg",
