@@ -14,7 +14,7 @@ const VisionAndMission: React.FC = () => {
 							Our Vision
 						</h2>
 						<p className='mb-2'>
-							At {COMPANY_PROFILE.name} Services, our
+							At {COMPANY_PROFILE.name} Solutions, our
 							vision is to create a future where financial
 							freedom is within reach for all individuals.
 							We envision a world where everyone has the
@@ -39,7 +39,7 @@ const VisionAndMission: React.FC = () => {
 							Our Mission
 						</h2>
 						<p className='mb-2'>
-							At {COMPANY_PROFILE.name} Services, our
+							At {COMPANY_PROFILE.name} Solutions, our
 							mission is to provide our clients with the
 							knowledge, tools, and personalized guidance
 							they need to achieve their financial goals.
