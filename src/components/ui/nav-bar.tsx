@@ -102,12 +102,9 @@ export default function NavBar() {
           </Link>
           <Button
             asChild
-            className="shrink-0 py-2 px-4  bg-teal-200 hover:bg-teal-400 rounded-lg cursor-pointer transition-shadow"
+            className=" py-2 px-4  bg-red-500 hover:bg-red-600 rounded-lg cursor-pointer transition-shadow"
           >
-            <Link
-              href={COMPANY_PROFILE.calendly}
-              className="text-stone-500 hover:text-stone-600"
-            >
+            <Link href={COMPANY_PROFILE.calendly} className="text-yellow-400">
               BOOK CONSULTATION
             </Link>
           </Button>

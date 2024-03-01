@@ -37,7 +37,7 @@ export default function ContactUs() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
@@ -62,39 +62,39 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="px-10 py-20">
-      <div className="text-center text-2xl lg:text-3xl font-bold mb-5 lg:mb-10">
+    <section className="px-10 py-20 text-stone-800 bg-stone-50">
+      <div className="text-center text-2xl lg:text-3xl font-normal mb-5 lg:mb-10 uppercase">
         Contact Us
       </div>
-      <div className="grid lg:grid-cols-2 gap-10">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
         <form className="" onSubmit={handleSubmit} method="POST">
           <div className="">
             <div className="mt-5 grid grid-cols-2 gap-5">
               <div className="col-span-2 md:col-span-1">
                 <label
-                  htmlFor="first-name"
-                  className="text-lg uppercase font-semibold"
+                  htmlFor="name"
+                  className="text-xs uppercase font-semibold"
                 >
                   Your Name
                 </label>
-                <div className="mt-2">
+                <>
                   <input
                     type="text"
                     id="name"
                     name="name"
                     placeholder="Name"
-                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2"
+                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 mt-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
                     value={formData.name}
                     onChange={handleChange}
                     required
                   />
-                </div>
+                </>
               </div>
 
               <div className="col-span-2 md:col-span-1">
                 <label
                   htmlFor="email"
-                  className="text-lg uppercase font-semibold"
+                  className="text-xs uppercase font-semibold"
                 >
                   Email Address
                 </label>
@@ -105,7 +105,7 @@ export default function ContactUs() {
                     name="email"
                     placeholder="Enter Email"
                     autoComplete="email"
-                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2"
+                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -116,7 +116,7 @@ export default function ContactUs() {
             <div className="mt-5">
               <label
                 htmlFor="subject"
-                className="text-lg uppercase font-semibold"
+                className="text-xs uppercase font-semibold"
               >
                 Subject
               </label>
@@ -127,7 +127,7 @@ export default function ContactUs() {
                   name="subject"
                   placeholder="Enter subject"
                   autoComplete="subject"
-                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2"
+                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
                   value={formData.subject}
                   onChange={handleChange}
                   required
@@ -137,7 +137,7 @@ export default function ContactUs() {
             <div className="mt-5">
               <label
                 htmlFor="message"
-                className="text-lg uppercase font-semibold"
+                className="text-xs uppercase font-semibold"
               >
                 Message
               </label>
@@ -146,7 +146,7 @@ export default function ContactUs() {
                   id="message"
                   name="message"
                   rows={3}
-                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2"
+                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
                   placeholder="Write a few sentences."
                   value={formData.message}
                   onChange={handleChange}
@@ -160,7 +160,7 @@ export default function ContactUs() {
             <Button
               type="submit"
               disabled={loading}
-              className="rounded-md bg-teal-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-teal-500"
+              className="rounded-md bg-teal-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-teal-700 tracking-wider"
             >
               {loading ? (
                 <div className="flex">
@@ -233,10 +233,10 @@ export default function ContactUs() {
           </div>
         </form>
         <div className="flex flex-col justify-center">
-          <div className="text-xl font-bold mb-10">
+          <div className="text-xl font-bold mb-4">
             Have questions or want to schedule a consultation?
           </div>
-          <p>
+          <p className="w-4/5 lg:w-11/12">
             Reach out to us today. We&apos;re here to address your inquiries and
             provide the guidance you need to achieve financial success.
           </p>
