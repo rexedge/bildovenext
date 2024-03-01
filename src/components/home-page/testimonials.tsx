@@ -22,7 +22,7 @@ export default function Testimonials() {
             src={testimony.image}
             className="mx-auto rounded-full h-20 w-20 object-cover object-center mb-5"
           />
-          <p className="font-bold text-lg uppercase mb-10">{testimony.title}</p>
+          <p className="font-bold text-lg uppercase mb-8">{testimony.title}</p>
           <p>{testimony.description}</p>
         </div>
       ))}
