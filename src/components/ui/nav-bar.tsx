@@ -23,8 +23,8 @@ export default function NavBar() {
     <div className="w-screen bg-teal-100 h-fit flex justify-between items-center py-2 px-10">
       <Link href="/" className="shrink-0 font-bold h-12 w-24">
         <Image
-          height={50}
-          width={50}
+          height={100}
+          width={100}
           src={"/logo.png"}
           alt=""
           className="h-full object-contain w-full"
@@ -68,9 +68,9 @@ export default function NavBar() {
         <SheetContent className="w-[400px] sm:w-[540px] bg-white pb-2 pt-10 px-4 flex flex-col gap-10 items-center ">
           <Link href="/" className="shrink-0 font-bold h-24 w-32">
             <Image
-              height={50}
-              width={50}
-              src={"/newLogo.png"}
+              height={100}
+              width={100}
+              src={"/logo.png"}
               alt=""
               className="h-full object-contain w-full"
             />
@@ -102,12 +102,9 @@ export default function NavBar() {
           </Link>
           <Button
             asChild
-            className="shrink-0 py-2 px-4  bg-teal-200 hover:bg-teal-400 rounded-lg cursor-pointer transition-shadow"
+            className=" py-2 px-4  bg-red-500 hover:bg-red-600 rounded-lg cursor-pointer transition-shadow"
           >
-            <Link
-              href={COMPANY_PROFILE.calendly}
-              className="text-stone-500 hover:text-stone-600"
-            >
+            <Link href={COMPANY_PROFILE.calendly} className="text-yellow-400">
               BOOK CONSULTATION
             </Link>
           </Button>
