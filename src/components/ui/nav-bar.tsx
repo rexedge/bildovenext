@@ -25,7 +25,7 @@ export default function NavBar() {
         <Image
           height={100}
           width={100}
-          src={"/logo.png"}
+          src={"/bildoveLogo1.png"}
           alt=""
           className="h-full object-contain w-full"
         />
