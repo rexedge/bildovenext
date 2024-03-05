@@ -57,7 +57,7 @@ export default function BCarousel() {
                       </p>
                     )}
                     {a.buttonText && (
-                      <Button className="shrink-0 text-sm py-2 px-4  bg-teal-500 text-white  hover:bg-teal-400  rounded-lg cursor-pointer">
+                      <Button className="shrink-0 text-sm py-2 px-4 bg-teal-500 text-white  hover:bg-teal-400  rounded-lg cursor-pointer">
                         <Link href={COMPANY_PROFILE.calendly}></Link>
                         {a.buttonText}
                       </Button>
