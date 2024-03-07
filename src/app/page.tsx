@@ -62,14 +62,14 @@ export default function Home() {
             Ready to Take Control of Your Financial Future?
           </div>
           <div className="text-center flex flex-col items-center">
-            <div className="text-md max-w-[600px] mt-5">
+            <div className="text-md max-w-[600px] pb-5 tracking-tight">
               Discover how our expertise and products can help you achieve
               financial security, protect your income, and build a lasting
               legacy. Take the first step today by getting in touch with our
               team. We&apos;re excited to embark on this financial journey with
               you!
             </div>
-            <Button className="mt-10 max-w-sm rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 px-10 shadow-lg font-bold hover:bg-gradient-to-tl transition duration-500">
+            <Button className=" mt-10 max-w-sm rounded-xl bg-gradient-to-tr from-pink-300 to-blue-300 px-10 py-4 shadow-lg font-bold hover:bg-gradient-to-tl transition-all duration-500 ">
               <Link href={COMPANY_PROFILE.calendly}>GET STARTED</Link>
             </Button>
           </div>
