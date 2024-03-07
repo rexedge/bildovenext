@@ -72,7 +72,7 @@ export const TESTIMONIES = [
     id: 1,
     title: `Alexa Judge`,
     image: `/alexa.jpg`,
-    description: `"Working with ${COMPANY_PROFILE.name} Solutions was a wonderful experience because they offered top-notch customer service. Right from the start, they took the time to comprehend my financial objectives and necessities, and then customized their services to fulfill those precise requirements. The team at ${COMPANY_PROFILE.name} Services was always accessible to answer my inquiries and provide direction throughout the entire process."`,
+    description: `"During a tough period, ${COMPANY_PROFILE.name} provided a lifeline. It wasn't just about the money; it was about regaining dignity and hope. Today, I'm more financially stable and able to pay it forward."`,
   },
   {
     id: 2,

@@ -6,14 +6,14 @@ import React from "react";
 
 export default function Testimonials() {
   return (
-    <section className="px-5 md:px-10 py-20 bg-teal-100 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section className="px-5 md:px-10 py-20  grid md:grid-cols-2 lg:grid-cols-3 gap-10">
       <div className="md:col-span-2 lg:col-span-3 text-center text-2xl lg:text-3xl font-normal mb-5 lg:mb-10">
         TESTIMONIALS
       </div>
       {TESTIMONIES.map((testimony, index) => (
         <div
           key={index}
-          className="md:col-span-1 bg-stone-50 p-5 rounded-lg mb-5 text-center"
+          className="md:col-span-1 bg-stone-100 p-5 rounded-lg mb-5 text-center shadow-xl hover:-translate-y-5 transition duration-500"
         >
           <Image
             height={200}
