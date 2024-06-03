@@ -2,7 +2,13 @@ import ContactUs from '@/components/home-page/contact-us';
 import Hero from '@/components/ui/hero';
 import MapView from '@/components/ui/map-view';
 import { CONTACT_HERO, MAP_LOCATION } from '@/utils/const';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+	title: 'Contact',
+	description: 'Our contact page',
+};
 
 export default function Contacts() {
 	return (

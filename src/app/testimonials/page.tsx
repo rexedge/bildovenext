@@ -1,4 +1,10 @@
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+	title: 'Testimonials',
+	description: 'What people have to say about Bildove financial services',
+};
 
 export default function Testimonials() {
 	return (
