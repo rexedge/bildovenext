@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 		template: `%s | ${COMPANY_PROFILE.name}`,
 		default: COMPANY_PROFILE.name,
 	},
-	keywords: ['licensed financial professional', 'life insurance'],
+	keywords: ['licensed financial professional', 'life insurance', 'IUL'],
 	referrer: 'origin-when-cross-origin',
 	description: COMPANY_PROFILE.description,
 	applicationName: 'Bildove Financial Services',
@@ -29,7 +29,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='en'>
-			<body className={`${inter.className} min-h-screen`}>
+			<body className={`${inter.className}`}>
 				<NavBar />
 				{children}
 				<Footer />
