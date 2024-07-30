@@ -8,7 +8,7 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ image, children }) => {
      return (
-          <div className="relative min-h-[calc(100svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[60svh]">
+          <div className="relative min-h-[calc(100svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[70svh]">
                <div className="absolute inset-0 h-full w-full">
                     <Image
                          src={image}

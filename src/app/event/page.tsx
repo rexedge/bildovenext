@@ -1,16 +1,13 @@
-import ContactUs from "@/components/home-page/contact-us";
+import { EventForm } from "@/components/forms/event-form";
 import ImageList from "@/components/image-list";
 import HeroSection from "@/components/layout/hero-section";
-import Logo from "@/components/layout/logo";
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { Button } from "@/components/ui/button";
-import Hero from "@/components/ui/hero";
-import { COMPANY_PROFILE } from "@/utils/const";
-import FormatAddress from "@/utils/format-address";
+import { Card } from "@/components/ui/card";
+import { Mail } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export const metadata: Metadata = {
      title: "Live Workshop - Financial Empowerment",
@@ -18,9 +15,16 @@ export const metadata: Metadata = {
           "Are you tired of traditional life insurance policies that offer limited growth potential? Are you looking for a financial vehicle that can help you build wealth, protect your family, and enjoy tax-efficient growth? Look no further than Index Universal Life (IUL) insurance.",
 };
 const images1 = [
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
+     {
+          image: "/foluke.jpg",
+          name: "Foluke Oladipo",
+          designation: "Licensed Financial Professional",
+     },
+     {
+          image: "/team/oladele-olaoye.jpg",
+          name: "Oladele Olaoye",
+          designation: "Licensed Financial Professional",
+     },
 ];
 const images2 = [
      { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
@@ -339,9 +343,12 @@ export default function EventsPage() {
                          </Button>
                     </MaxWidthWrapper>
                </div>
-               {/* <div className="bg-teal-800 px-5 py-10 text-white">
+               <div className="bg-teal-800 px-5 py-10 text-white">
+                    <h3 className="mb-5 text-center text-2xl lg:text-4xl">
+                         Topics of Discussion Includes:
+                    </h3>
                     <MaxWidthWrapper className="grid gap-6 lg:grid-cols-5">
-                         <div className="flex h-96 w-full items-center justify-center overflow-hidden p-6 lg:col-span-2">
+                         <div className="flex h-96 w-full items-center justify-center overflow-hidden lg:col-span-2">
                               <Image
                                    alt=""
                                    src={"/presentation.jpg"}
@@ -350,20 +357,53 @@ export default function EventsPage() {
                                    className="h-full w-full object-cover"
                               />
                          </div>
-                         <div className="grid gap-3 px-6 text-xl lg:col-span-3">
-                              <div className="grid lg:grid-cols-2">
-                                   <div className="">Garri</div>
-                                   <div className="">Garri</div>
-                                   <div className="">Garri</div>
-                                   <div className="">Garri</div>
-                                   <div className="">Garri</div>
+                         <div className="grid items-center px-6 text-xl lg:col-span-3 lg:justify-center">
+                              <div className="flex flex-col flex-wrap place-items-start lg:flex-row">
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income in Retirement
+                                   </div>
                               </div>
+                              <Button
+                                   asChild
+                                   size={"lg"}
+                                   className="mx-auto max-w-min bg-yellow-600 text-xl hover:bg-yellow-700 lg:ml-0.5 lg:py-2"
+                              >
+                                   <Link href={"#registration-form"}>
+                                        Get Started
+                                   </Link>
+                              </Button>
                          </div>
                     </MaxWidthWrapper>
-               </div> */}
+               </div>
                <HeroSection image="/modern-business-buildings-financial-district.jpg">
-                    <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
-                         <div id="registration-form"></div>
+                    <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10">
+                         <Card
+                              id="registration-form"
+                              className="mx-auto w-full max-w-sm p-6"
+                         >
+                              <EventForm />
+                         </Card>
                     </MaxWidthWrapper>
                </HeroSection>
           </>
