@@ -19,7 +19,10 @@ export const RegistrationUserNotificationTemplate: React.FC<
      textReminder,
 }) => (
      <div>
-          <h1>Welcome, {firstName}!</h1>
-          <h2>Email = {email}!</h2>
+          <h1>Hi, {firstName}!</h1>
+          <p>
+               Thank you for registering, one of our agent will get in touch
+               with you shortly!
+          </p>
      </div>
 );

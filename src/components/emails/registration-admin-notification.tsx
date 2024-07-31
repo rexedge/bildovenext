@@ -19,9 +19,12 @@ export const RegistrationAdminNotificationTemplate: React.FC<
      textReminder,
 }) => (
      <div>
-          <h1>
-               {firstName} just registered for {eventToAttend}!
-          </h1>
-          <h2>Email = {email}!</h2>
+          <h1>{firstName} just registered!</h1>
+          <h2>Details</h2>
+          <p>Email: {email}</p>
+          <p>Phone number: {phone}</p>
+          <p>
+               Full Name: {firstName} {lastName}
+          </p>
      </div>
 );

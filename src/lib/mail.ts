@@ -17,7 +17,7 @@ export const sendAdminNotificationMail = async (
           from: "Bildove  Team <support@bildovefinancialservices.com>",
           reply_to: "bildovefinancial@gmail.com",
           to: ["ap.oyeniran@gmail.com", "bildovefinancial@gmail.com"],
-          subject: "2FA code!",
+          subject: "New Registration!",
           react: RegistrationAdminNotificationTemplate(data),
      });
 };
@@ -28,7 +28,7 @@ export const sendUserNotificationMail = async (
           from: "Bildove Team <support@bildovefinancialservices.com>",
           reply_to: "bildovefinancial@gmail.com",
           to: data.email!,
-          subject: "2FA code!",
+          subject: "Registration Successful!",
           react: RegistrationUserNotificationTemplate(data),
      });
 };
