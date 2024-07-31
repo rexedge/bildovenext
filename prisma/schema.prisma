@@ -12,3 +12,18 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Registration {
+  id            String @id @default(cuid())
+  firstName     String
+  lastName      String
+  email         String @unique
+  phone         String
+  noOfAttendees String
+  guestNames    String
+  textReminder  String
+  eventToAttend String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

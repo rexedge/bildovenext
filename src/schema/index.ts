@@ -10,7 +10,7 @@ export const EventFormSchema = z.object({
      email: z.string().email({
           message: "Enter valid email address.",
      }),
-     phone: z.string().min(2, {
+     phone: z.string().min(9, {
           message: "Username must be at least 2 characters.",
      }),
      noOfAttendees: z.enum(["1", "2"], {

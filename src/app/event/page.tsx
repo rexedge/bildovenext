@@ -25,13 +25,45 @@ const images1 = [
           name: "Oladele Olaoye",
           designation: "Licensed Financial Professional",
      },
+     {
+          image: "/team/elfrida-majekodunmi.jpg",
+          name: "Elfrida Majekodunmi",
+          designation: "Licensed Financial Professional",
+     },
 ];
 const images2 = [
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
+     {
+          image: "/team/adetoun-oguniyi.jpg",
+          name: "Adetoun Oguniyi",
+          designation: "Licensed Financial Professional",
+     },
+     {
+          image: "/team/john-sibbles.jpg",
+          name: "John Sibbles",
+          designation: "Licensed Financial Professional",
+     },
+     {
+          image: "/team/yowantie-edward.jpg",
+          name: "Yowantie Edward",
+          designation: "Licensed Financial Professional",
+     },
 ];
 const images3 = [
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
-     { image: "/presentation.jpg", name: "Garri", designation: "Developer" },
+     {
+          image: "/team/michael-shusi.jpg",
+          name: "Michael Shusi",
+          designation: "Licensed Financial Professional",
+     },
+     {
+          image: "/team/ruka-adenopo.jpg",
+          name: "Ruka Adenopo",
+          designation: "Licensed Financial Professional",
+     },
+     {
+          image: "/team/abel-adedeji.jpg",
+          name: "Abel Adedeji",
+          designation: "Licensed Financial Professional",
+     },
 ];
 
 export default function EventsPage() {

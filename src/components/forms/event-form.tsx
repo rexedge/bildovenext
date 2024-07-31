@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Loader } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,7 +16,6 @@ import {
      FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { toast } from "@/components/ui/use-toast";
 import { EventFormSchema } from "@/schema";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
@@ -25,8 +25,13 @@ import {
      SelectTrigger,
      SelectValue,
 } from "@/components/ui/select";
+import { toast } from "sonner";
+import { useTransition } from "react";
+import { register } from "@/actions/register";
 
 export function EventForm() {
+     const [isPending, startTransition] = useTransition();
+
      const form = useForm<z.infer<typeof EventFormSchema>>({
           resolver: zodResolver(EventFormSchema),
           mode: "onChange",
@@ -42,15 +47,27 @@ export function EventForm() {
      });
 
      function onSubmit(data: z.infer<typeof EventFormSchema>) {
-          toast({
-               title: "You submitted the following values:",
-               description: (
-                    <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-                         <code className="text-white">
-                              {JSON.stringify(data, null, 2)}
-                         </code>
-                    </pre>
-               ),
+          startTransition(() => {
+               register(data)
+                    .then((data) => {
+                         if (data?.error) {
+                              toast.error(data.error, {
+                                   duration: 7000,
+                              });
+                         }
+                         if (data?.success) {
+                              toast.success(data.success, {
+                                   description: `A message has been sent to you at ${data.metadata.registration.email}`,
+                                   duration: 7000,
+                              });
+                              form.reset();
+                         }
+                    })
+                    .catch(() => {
+                         toast.error("Something went wrong!!!", {
+                              duration: 7000,
+                         });
+                    });
           });
      }
 
@@ -230,7 +247,13 @@ export function EventForm() {
                               </FormItem>
                          )}
                     />
-                    <Button type="submit">Submit</Button>
+                    <Button disabled={isPending} type="submit">
+                         {isPending ? (
+                              <Loader className="h-4 w-4 animate-spin" />
+                         ) : (
+                              "Send To All"
+                         )}
+                    </Button>
                </form>
           </Form>
      );
