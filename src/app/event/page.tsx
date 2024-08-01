@@ -18,51 +18,51 @@ const images1 = [
      {
           image: "/foluke.jpg",
           name: "Foluke Oladipo",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/oladele-olaoye.jpg",
           name: "Oladele Olaoye",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/elfrida-majekodunmi.jpg",
           name: "Elfrida Majekodunmi",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
 ];
 const images2 = [
      {
           image: "/team/adetoun-oguniyi.jpg",
           name: "Adetoun Oguniyi",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/john-sibbles.jpg",
           name: "John Sibbles",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/yowantie-edward.jpg",
           name: "Yowantie Edward",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
 ];
 const images3 = [
      {
           image: "/team/michael-shusi.jpg",
           name: "Michael Shusi",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/ruka-adenopo.jpg",
           name: "Ruka Adenopo",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
      {
           image: "/team/abel-adedeji.jpg",
           name: "Abel Adedeji",
-          designation: "Licensed Financial Professional",
+          designation: "Financial Strategist",
      },
 ];
 
