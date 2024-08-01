@@ -10,13 +10,16 @@ const Footer = () => (
           <MaxWidthWrapper className="">
                <div className="flex flex-wrap justify-between">
                     <div className="mb-8 w-full md:w-1/2 lg:mb-0 lg:w-2/5">
-                         <Link href={"/"} className="text-lg font-semibold">
+                         <Link
+                              href="/"
+                              className="h-12 w-24 shrink-0 font-bold"
+                         >
                               <Image
-                                   height={50}
-                                   width={50}
+                                   height={100}
+                                   width={100}
+                                   src={"/bildoveLogo1.png"}
                                    alt=""
-                                   src={"/ssf.png"}
-                                   className="invert"
+                                   className="h-full w-full object-contain"
                               />
                          </Link>
                          <div className="my-3">
