@@ -1,6 +1,7 @@
 "use server";
 
 import { z } from "zod";
+import axios from "axios";
 
 import { EventFormSchema } from "@/schema";
 import prisma from "../lib/db";
@@ -9,6 +10,7 @@ import {
      sendUserNotificationMail,
 } from "@/lib/mail";
 import { getRegistrationByEmail } from "@/data/registration";
+import { APP_URL } from "@/lib/consts";
 
 export const register = async (formData: z.infer<typeof EventFormSchema>) => {
      const validatedFields = EventFormSchema.safeParse(formData);
@@ -27,9 +29,18 @@ export const register = async (formData: z.infer<typeof EventFormSchema>) => {
           const registrationData = await prisma.registration.create({
                data,
           });
-          await sendUserNotificationMail(data);
-          await sendAdminNotificationMail(data);
-          console.log({ registrationData });
+          const sendAdminMail = await axios.post(
+               `${APP_URL}/api/send/admin`,
+               data,
+          );
+          const sendUserMail = await axios.post(
+               `${APP_URL}/api/send/user`,
+               data,
+          );
+
+          console.log("Admin", sendAdminMail.status);
+          console.log("User", sendUserMail.status);
+
           return {
                success: `registration successful`,
                metadata: {
@@ -37,6 +48,7 @@ export const register = async (formData: z.infer<typeof EventFormSchema>) => {
                },
           };
      } catch (error) {
+          console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDD", { error });
           return { error: `Something went wrong` };
      }
 };

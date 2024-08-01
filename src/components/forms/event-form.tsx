@@ -63,7 +63,7 @@ export function EventForm() {
                               form.reset();
                          }
                     })
-                    .catch(() => {
+                    .catch((error) => {
                          toast.error("Something went wrong!!!", {
                               duration: 7000,
                          });
