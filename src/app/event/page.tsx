@@ -33,8 +33,8 @@ const images1 = [
 ];
 const images2 = [
      {
-          image: "/team/adetoun-oguniyi.jpg",
-          name: "Adetoun Oguniyi",
+          image: "/team/sarah-adedotun.jpg",
+          name: "Sarah Adedotun",
           designation: "Financial Strategist",
      },
      {
