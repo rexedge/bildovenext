@@ -251,7 +251,7 @@ export function EventForm() {
                          {isPending ? (
                               <Loader className="h-4 w-4 animate-spin" />
                          ) : (
-                              "Send To All"
+                              "Register"
                          )}
                     </Button>
                </form>
