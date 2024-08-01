@@ -7,7 +7,7 @@
           "build": "next build",
           "start": "next start -p 2453",
           "lint": "next lint",
-          "postinstall": "prisma generate && prisma migrate deploy"
+          "postinstall": "prisma generate"
      },
      "dependencies": {
           "@heroicons/react": "^1.0.6",
