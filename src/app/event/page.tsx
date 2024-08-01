@@ -72,12 +72,14 @@ export default function EventsPage() {
                <HeroSection image="/modern-business-buildings-financial-district.jpg">
                     <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
                          <h1 className="mb-2 text-4xl font-bold lg:text-6xl">
-                              Control Your <br /> Financial Future
+                              How to be debt free, <br /> A secret to <br />{" "}
+                              Financial Freedom
                          </h1>
                          <p className="max-w-2xl text-2xl">
-                              At this free workshop, learn need-to-know
-                              information about lowering taxes on your RMDs and
-                              optimizing your Social Security/Medicare benefits.
+                              Discover proven methods and strategies for
+                              eliminating debt, creating a sustainable budget,
+                              increasing your income, and investing wisely for a
+                              secure financial future.
                          </p>
                          <Link
                               href={"#"}
@@ -201,7 +203,7 @@ export default function EventsPage() {
                     <MaxWidthWrapper className="grid gap-6 lg:grid-cols-5">
                          <div className="flex flex-col justify-center gap-4 text-center lg:col-span-2 lg:text-start">
                               <h3 className="text-xl text-yellow-500">
-                                   Free IUL Workshop!
+                                   Free Workshop!
                               </h3>
                               <p className="max-w-2xl font-serif text-2xl lg:text-5xl">
                                    You will benefit from this seminar by
@@ -219,21 +221,27 @@ export default function EventsPage() {
                          </div>
                          <ul className="flex list-decimal flex-col justify-center gap-3 px-6 text-xl lg:col-span-3">
                               <li>
-                                   The different Medicare pitfalls and simple
-                                   changes you can make to combat them.
+                                   Gain actionable steps to overcome debt: Learn
+                                   practical strategies and create a
+                                   personalized debt repayment plan to achieve
+                                   financial freedom faster.
                               </li>
                               <li>
-                                   How to fill gaps in Medicare coverage to save
-                                   you the most money possible.
+                                   Build a strong financial foundation: Discover
+                                   how to create and maintain a sustainable
+                                   budget, establish an emergency fund, and
+                                   invest wisely for long-term financial
+                                   security.
                               </li>
                               <li>
                                    Ways to receive up to 100% of your Social
                                    Security benefits tax-free.
                               </li>
                               <li>
-                                   How to better understand opportunities so
-                                   that you may not lose THOUSANDS of dollars in
-                                   lost benefits.
+                                   Develop a mindset of abundance: Shift your
+                                   perspective from scarcity to abundance,
+                                   empowering you to make informed financial
+                                   decisions and attract wealth.
                               </li>
                          </ul>
                     </MaxWidthWrapper>
@@ -361,8 +369,8 @@ export default function EventsPage() {
                     <MaxWidthWrapper className="grid place-items-center gap-5 px-5 py-10">
                          <div className="max-w-4xl text-center text-xl lg:text-3xl">
                               Attend this free educational workshop to learn all
-                              there is to know about Index Universal Life
-                              Insurance!
+                              there is to know about attaining financial freedom
+                              before the end of 2024
                          </div>
                          <Button
                               asChild
@@ -393,27 +401,43 @@ export default function EventsPage() {
                               <div className="flex flex-col flex-wrap place-items-start lg:flex-row">
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Legacy Transfer
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Business Ownership
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Retirement Planning
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Investing
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Income Growth and Protection
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Income in Retirement
+                                        Mortgage Protection
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Side hustles
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Passive income
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Debt Management
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Budgeting and Financial Planning
                                    </div>
                               </div>
                               <Button
