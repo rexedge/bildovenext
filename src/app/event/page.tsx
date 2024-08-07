@@ -327,17 +327,17 @@ export default function EventsPage() {
                                         individuals, families, businesses,
                                         groups, and any entity seeking financial
                                         stability and growth. Our core belief,
-                                        "No family member left behind," extends
-                                        to every client, ensuring that we offer
-                                        comprehensive support across all
-                                        sectors.
+                                        &quot;No family member left
+                                        behind,&quot; extends to every client,
+                                        ensuring that we offer comprehensive
+                                        support across all sectors.
                                    </p>
                                    <p>
-                                        Whether you're an individual looking to
-                                        secure your future, a family aiming to
-                                        build a strong financial foundation, a
-                                        business owner seeking growth
-                                        strategies, or a group in need of
+                                        Whether you&apos;re an individual
+                                        looking to secure your future, a family
+                                        aiming to build a strong financial
+                                        foundation, a business owner seeking
+                                        growth strategies, or a group in need of
                                         financial management solutions, Team
                                         Bildove is your trusted partner. We
                                         offer a wide range of financial services
