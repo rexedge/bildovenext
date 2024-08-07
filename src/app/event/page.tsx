@@ -321,36 +321,35 @@ export default function EventsPage() {
                          <div className="">
                               <div className="flex flex-col justify-center gap-3 text-lg lg:max-w-2xl">
                                    <p>
-                                        After six years of successful real
-                                        estate investing, Brandon earned his
-                                        insurance license in the spring of 2007
-                                        and has assisted many individuals and
-                                        families in protecting their well-being
-                                        and way of life through health &
-                                        disability coverage, providing them
-                                        peace of mind with life & long-term care
-                                        insurance, and securing their retirement
-                                        years in meeting their financial
-                                        objectives with annuities and other safe
-                                        money accounts. In addition to
-                                        representing many insurance carriers as
-                                        an independent agent, Brandon
-                                        specializes in marketing, compliance,
-                                        case design & processing, and client
-                                        administration in his operations role at
-                                        Beckett Financial Group.
+                                        Team Bildove is a dedicated team of
+                                        financial experts committed to providing
+                                        tailored financial solutions for
+                                        individuals, families, businesses,
+                                        groups, and any entity seeking financial
+                                        stability and growth. Our core belief,
+                                        "No family member left behind," extends
+                                        to every client, ensuring that we offer
+                                        comprehensive support across all
+                                        sectors.
                                    </p>
                                    <p>
-                                        Brandon has lived in the Columbia area
-                                        since 1990, attended Lexington High
-                                        School and the University of South
-                                        Carolina and is a Gamecocks basketball
-                                        and soccer season ticket holder. He
-                                        enjoys spending time with family and
-                                        friends, evenings out in Columbia,
-                                        weekends with all manner of sports,
-                                        travel, concerts, and long walks around
-                                        his West Columbia neighborhood.
+                                        Whether you're an individual looking to
+                                        secure your future, a family aiming to
+                                        build a strong financial foundation, a
+                                        business owner seeking growth
+                                        strategies, or a group in need of
+                                        financial management solutions, Team
+                                        Bildove is your trusted partner. We
+                                        offer a wide range of financial services
+                                        designed to meet the unique needs of
+                                        each client.
+                                   </p>
+                                   <p>
+                                        With our expertise, compassion, and
+                                        commitment, we empower our clients to
+                                        make informed financial decisions,
+                                        achieve their goals, and create a
+                                        prosperous future.
                                    </p>
                                    <Button
                                         asChild
