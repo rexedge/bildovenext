@@ -21,47 +21,37 @@ const images1 = [
           designation: "Financial Strategist",
      },
      {
-          image: "/team/oladele-olaoye.jpg",
-          name: "Oladele Olaoye",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/elfrida-majekodunmi.jpg",
-          name: "Elfrida Majekodunmi",
+          image: "/team/michael-shusi.jpg",
+          name: "Michael Shusi",
           designation: "Financial Strategist",
      },
 ];
 const images2 = [
      {
-          image: "/team/sarah-adedotun.jpg",
-          name: "Sarah Adedotun",
+          image: "/team/grace-adelugba.jpg",
+          name: "Grace Adelugba",
           designation: "Financial Strategist",
      },
      {
-          image: "/team/john-sibbles.jpg",
-          name: "John Sibbles",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/yowantie-edward.jpg",
-          name: "Yowantie Edward",
+          image: "/team/dare-adeniyi.jpg",
+          name: "Dare Adeniyi",
           designation: "Financial Strategist",
      },
 ];
 const images3 = [
      {
-          image: "/team/michael-shusi.jpg",
-          name: "Michael Shusi",
+          image: "/team/oladele-olaoye.jpg",
+          name: "Oladele Olaoye",
           designation: "Financial Strategist",
      },
      {
-          image: "/team/ruka-adenopo.jpg",
-          name: "Ruka Adenopo",
+          image: "/team/nosa-owens.jpg",
+          name: "Nosa Owens",
           designation: "Financial Strategist",
      },
      {
-          image: "/team/abel-adedeji.jpg",
-          name: "Abel Adedeji",
+          image: "/team/funmi-ogunsola.jpg",
+          name: "Funmi Ogunsola",
           designation: "Financial Strategist",
      },
 ];
