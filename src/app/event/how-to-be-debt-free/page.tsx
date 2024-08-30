@@ -25,11 +25,21 @@ const images1 = [
           name: "Michael Shusi",
           designation: "Financial Strategist",
      },
+     {
+          image: "/team/blessing-oladipo.jpg",
+          name: "Blessing Oladipo",
+          designation: "Financial Strategist",
+     },
 ];
 const images2 = [
      {
-          image: "/team/grace-adelugba.jpg",
-          name: "Grace Adelugba",
+          image: "/team/emmanuel-oso.jpg",
+          name: "Emmanuel Oso",
+          designation: "Financial Strategist",
+     },
+     {
+          image: "/team/foluke-oladele.jpg",
+          name: "Foluke Oladele",
           designation: "Financial Strategist",
      },
      {
@@ -45,13 +55,13 @@ const images3 = [
           designation: "Financial Strategist",
      },
      {
-          image: "/team/nosa-owens.jpg",
-          name: "Nosa Owens",
+          image: "/team/funmi-ogunsola.jpg",
+          name: "Funmi Ogunsola",
           designation: "Financial Strategist",
      },
      {
-          image: "/team/funmi-ogunsola.jpg",
-          name: "Funmi Ogunsola",
+          image: "/team/nosa-owens.jpg",
+          name: "Nosa Owens",
           designation: "Financial Strategist",
      },
 ];
@@ -75,7 +85,7 @@ export default function EventsPage() {
                               href={"#"}
                               className="text-xl font-bold lg:text-3xl"
                          >
-                              Thursday, September 14th at 12:00 PM
+                              Saturday, September 14th at 12:00 PM
                          </Link>
                          <div className="text-2xl">
                               <div className="font-bold">
@@ -381,7 +391,7 @@ export default function EventsPage() {
                          <div className="flex h-96 w-full items-center justify-center overflow-hidden lg:col-span-2">
                               <Image
                                    alt=""
-                                   src={"/presentation.jpg"}
+                                   src={"/coffee-break.jpg"}
                                    height={600}
                                    width={1800}
                                    className="h-full w-full object-cover"
