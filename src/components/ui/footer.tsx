@@ -19,7 +19,7 @@ const Footer = () => (
                                    width={100}
                                    src={"/bildoveLogo1.png"}
                                    alt=""
-                                   className="h-full w-full object-contain"
+                                   className="h-16 w-auto object-contain"
                               />
                          </Link>
                          <div className="my-3">
