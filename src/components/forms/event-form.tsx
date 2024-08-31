@@ -99,7 +99,8 @@ export function EventForm() {
                                                        <RadioGroupItem value="08-08-2024" />
                                                   </FormControl>
                                                   <FormLabel className="font-normal">
-                                                       August 8, 2024 at 6:00 PM
+                                                       September 14, 2024 at
+                                                       12:00 PM EST
                                                   </FormLabel>
                                              </FormItem>
                                         </RadioGroup>

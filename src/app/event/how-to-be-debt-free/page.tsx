@@ -401,19 +401,20 @@ export default function EventsPage() {
                               <div className="flex flex-col flex-wrap place-items-start lg:flex-row">
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Legacy Transfer
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Business Ownership
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
                                         Retirement Planning
                                    </div>
+                                   {/* <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Business Ownership
+                                   </div> */}
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Investing
+                                        Estate Planning
+                                   </div>
+
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Investment Portfolios
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
@@ -425,11 +426,11 @@ export default function EventsPage() {
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Side hustles
+                                        Side hustles / Passive income Generation
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Passive income
+                                        Building Credits & Credit Repair
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
