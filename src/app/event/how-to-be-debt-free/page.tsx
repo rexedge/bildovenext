@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-     title: "Live Workshop - Financial Empowerment",
+     title: "Live Workshop - Starting 2025 stronger!",
      description:
           "Are you tired of traditional life insurance policies that offer limited growth potential? Are you looking for a financial vehicle that can help you build wealth, protect your family, and enjoy tax-efficient growth? Look no further than Index Universal Life (IUL) insurance.",
 };
@@ -71,23 +71,20 @@ export default function EventsPage() {
           <>
                <HeroSection image="/modern-business-buildings-financial-district.jpg">
                     <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
-                         <h1 className="mb-2 text-4xl font-bold lg:text-6xl">
-                              How to be debt free, <br /> A secret to <br />{" "}
+                         <h1 className="mb-2 text-2xl font-bold lg:text-6xl">
+                              Starting 2025 stronger, <br /> A secret to <br />{" "}
                               Financial Freedom
                          </h1>
-                         <p className="max-w-2xl text-2xl">
+                         <p className="max-w-2xl text-lg lg:text-2xl">
                               Discover proven methods and strategies for
                               eliminating debt, creating a sustainable budget,
                               increasing your income, and investing wisely for a
                               secure financial future.
                          </p>
-                         <Link
-                              href={"#"}
-                              className="text-xl font-bold lg:text-3xl"
-                         >
+                         <Link href={"#"} className="font-bold lg:text-3xl">
                               Saturday, September 14th at 12:00 PM
                          </Link>
-                         <div className="text-2xl">
+                         <div className="text-lg lg:text-2xl">
                               <div className="font-bold">
                                    Holiday Inn Express Hotel & Suite,
                                    Lawrenceville, an IHG Hotel

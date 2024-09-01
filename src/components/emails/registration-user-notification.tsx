@@ -24,8 +24,9 @@ export const RegistrationUserNotificationTemplate: React.FC<
                Hi {firstName} {lastName},
           </p>
           <p>
-               We&apos;re excited to have you registered for Financial
-               Empowerment Live Workshop on September 14 at 12:00PM EST!
+               We&apos;re excited to have you registered for the
+               <b>&quot;Starting 2025 stronger&quot;</b> Financial Empowerment
+               Live Workshop on September 14 at 12:00PM EST!
           </p>
           <p>
                We will send you a reminder a few days before the event to

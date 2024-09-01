@@ -3,10 +3,9 @@ import { COMPANY_PROFILE } from "@/utils/const";
 import FormatAddress from "@/utils/format-address";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const Footer = () => (
-     <footer className="bg-teal-800 py-8 text-white">
+     <footer className="bg-teal-800 px-2 py-8 text-white">
           <MaxWidthWrapper className="">
                <div className="flex flex-wrap justify-between">
                     <div className="mb-8 w-full md:w-1/2 lg:mb-0 lg:w-2/5">
@@ -30,7 +29,7 @@ const Footer = () => (
                          <p className="mb-3">Phone: {COMPANY_PROFILE.phone}</p>
                          <p className="">Email: {COMPANY_PROFILE.email}</p>
                     </div>
-                    <div className="mb-8 w-full md:mb-0 md:w-1/2 lg:w-1/5">
+                    <div className="mb-8 w-[45%] md:mb-0 lg:w-1/5">
                          <h2 className="mb-4 text-lg font-semibold">
                               Quick Links
                          </h2>

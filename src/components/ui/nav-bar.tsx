@@ -1,25 +1,16 @@
 /** @format */
 
 "use client";
+import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
+import { NO_NAV_LINKS } from "@/routes";
+import { COMPANY_PROFILE } from "@/utils/const";
 import { MenuIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import Link from "next/link";
-import React, { Fragment, useEffect, useRef, useState } from "react";
-import { COMPANY_PROFILE } from "@/utils/const";
-import { Button } from "./button";
-import { AnimatePresence, motion } from "framer-motion";
-import {
-     Sheet,
-     SheetContent,
-     SheetDescription,
-     SheetHeader,
-     SheetTitle,
-     SheetTrigger,
-} from "./sheet";
-import { Separator } from "./separator";
 import { usePathname } from "next/navigation";
-import { NO_NAV_LINKS } from "@/routes";
-import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
+import { Button } from "./button";
+import { Separator } from "./separator";
+import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 
 export default function NavBar() {
      const pathName = usePathname();
@@ -27,7 +18,7 @@ export default function NavBar() {
 
      return (
           <div className="w-screen bg-teal-100">
-               <MaxWidthWrapper className="flex h-fit items-center justify-between py-2">
+               <MaxWidthWrapper className="flex h-fit items-center justify-between p-2">
                     <Link href="/" className="h-12 w-24 shrink-0 font-bold">
                          <Image
                               height={100}

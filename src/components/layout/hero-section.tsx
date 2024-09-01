@@ -4,11 +4,16 @@ import React, { ReactNode } from "react";
 interface HeroSectionProps {
      image: string;
      children: ReactNode;
+     className?: string;
 }
 
-const HeroSection: React.FC<HeroSectionProps> = ({ image, children }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({
+     image,
+     children,
+     className,
+}) => {
      return (
-          <div className="relative min-h-[calc(100svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[70svh]">
+          <div className="relative min-h-[calc(120svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[70svh]">
                <div className="absolute inset-0 h-full w-full">
                     <Image
                          src={image}
