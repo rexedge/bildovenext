@@ -261,6 +261,10 @@ export default function EventsPage() {
                               </h2>
                               <ul className="flex list-inside list-disc flex-col justify-center px-6 text-start text-lg">
                                    <li>
+                                        Credit building for beginner, Mending
+                                        credit and Debt management
+                                   </li>
+                                   <li>
                                         The uncertain future of Social Security
                                         and what other options are available.
                                    </li>
@@ -400,10 +404,14 @@ export default function EventsPage() {
                                         <Mail className="h-12 w-12 shrink-0" />
                                         Retirement Planning
                                    </div>
-                                   {/* <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Business Ownership
-                                   </div> */}
+                                        Debt Management
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Credit and Debit Card Basics
+                                   </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
                                         Estate Planning
