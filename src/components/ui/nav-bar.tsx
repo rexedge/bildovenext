@@ -2,7 +2,6 @@
 
 "use client";
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
-import { NO_NAV_LINKS } from "@/routes";
 import { COMPANY_PROFILE } from "@/utils/const";
 import { MenuIcon } from "@heroicons/react/solid";
 import Image from "next/image";
@@ -14,10 +13,10 @@ import { Sheet, SheetContent, SheetTrigger } from "./sheet";
 
 export default function NavBar() {
      const pathName = usePathname();
-     const needsNavLinks = NO_NAV_LINKS.includes(pathName!);
+     const needsNavLinks = pathName?.startsWith("/event");
 
      return (
-          <div className="w-screen bg-teal-100">
+          <div className="bg-teal-100">
                <MaxWidthWrapper className="flex h-fit items-center justify-between p-2">
                     <Link href="/" className="h-12 w-24 shrink-0 font-bold">
                          <Image

@@ -78,7 +78,8 @@ export default function EventsPage() {
                          <p className="max-w-2xl text-lg lg:text-2xl">
                               Discover proven methods and strategies for
                               eliminating debt, creating a sustainable budget,
-                              increasing your income, and investing wisely for a
+                              increasing your income, setting up your child for
+                              financial success and investing wisely for a
                               secure financial future.
                          </p>
                          <Link href={"#"} className="font-bold lg:text-3xl">
@@ -225,6 +226,14 @@ export default function EventsPage() {
                                    financial freedom faster.
                               </li>
                               <li>
+                                   How to set your child up early for financial
+                                   success.
+                              </li>
+                              <li>
+                                   Credit building strategies for your teens and
+                                   first time builders.
+                              </li>
+                              <li>
                                    Build a strong financial foundation: Discover
                                    how to create and maintain a sustainable
                                    budget, establish an emergency fund, and
@@ -268,11 +277,7 @@ export default function EventsPage() {
                                         The uncertain future of Social Security
                                         and what other options are available.
                                    </li>
-                                   <li>
-                                        Maintaining the &quot;new normal&quot;
-                                        in 2024 and projections for the market
-                                        this year.
-                                   </li>
+                                   <li>Projections for the years AHEAD</li>
                                    <li>
                                         Why income that lasts is important
                                         during retirement.

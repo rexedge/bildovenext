@@ -13,7 +13,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
      className,
 }) => {
      return (
-          <div className="relative min-h-[calc(120svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[70svh]">
+          <div className="relative min-h-[calc(120svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[80svh]">
                <div className="absolute inset-0 h-full w-full">
                     <Image
                          src={image}
