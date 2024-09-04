@@ -52,14 +52,14 @@ export default function RootLayout({
                               fbq('track', 'PageView');
                          `}
                     </Script>
-                    <noscript>
+                    {/* <noscript>
                          <img
                               height="1"
                               width="1"
                               style={{ display: "none" }}
                               src={`https://www.facebook.com/tr?id=5596665852661106&ev=PageView&noscript=1`}
                          />
-                    </noscript>
+                    </noscript> */}
                </body>
           </html>
      );
