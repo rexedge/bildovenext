@@ -1,10 +1,11 @@
-import NavBar from "@/components/ui/nav-bar";
-import "./globals.css";
-import { Inter } from "next/font/google";
 import Footer from "@/components/ui/footer";
+import NavBar from "@/components/ui/nav-bar";
 import { COMPANY_PROFILE } from "@/utils/const";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Metadata } from "next";
+import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
 }) {
      return (
           <html lang="en">
+               <GoogleTagManager gtmId="GTM-PRT4WHMD" />
                <body className={`${inter.className}`}>
                     <NavBar />
                     {children}

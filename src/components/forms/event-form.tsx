@@ -1,22 +1,21 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Loader } from "lucide-react";
 
+import { register } from "@/actions/register";
 import { Button } from "@/components/ui/button";
 import {
      Form,
      FormControl,
-     FormDescription,
      FormField,
      FormItem,
      FormLabel,
      FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { EventFormSchema } from "@/schema";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import {
      Select,
@@ -25,11 +24,13 @@ import {
      SelectTrigger,
      SelectValue,
 } from "@/components/ui/select";
-import { toast } from "sonner";
+import { EventFormSchema } from "@/schema";
+import { useRouter } from "next/navigation";
 import { useTransition } from "react";
-import { register } from "@/actions/register";
+import { toast } from "sonner";
 
 export function EventForm() {
+     const router = useRouter();
      const [isPending, startTransition] = useTransition();
 
      const form = useForm<z.infer<typeof EventFormSchema>>({
@@ -60,7 +61,7 @@ export function EventForm() {
                                    description: `A message has been sent to you at ${data.metadata.registration.email}`,
                                    duration: 7000,
                               });
-                              form.reset();
+                              router.push("/event/thank-you");
                          }
                     })
                     .catch((error) => {
