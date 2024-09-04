@@ -1,7 +1,6 @@
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/nav-bar";
 import { COMPANY_PROFILE } from "@/utils/const";
-import { GoogleTagManager } from "@next/third-parties/google";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -32,7 +31,7 @@ export default function RootLayout({
 }) {
      return (
           <html lang="en">
-               <GoogleTagManager gtmId="GTM-PRT4WHMD" />
+               {/* <GoogleTagManager gtmId="GTM-PRT4WHMD" /> */}
 
                <body className={`${inter.className}`}>
                     <NavBar />
@@ -49,16 +48,17 @@ export default function RootLayout({
                               t.src=v;s=b.getElementsByTagName(e)[0];
                               s.parentNode.insertBefore(t,s)}(window, document,'script',
                               'https://connect.facebook.net/en_US/fbevents.js');
-                              fbq('init', '5596665852661106');
+                              fbq('init', '528408153212828');
                               fbq('track', 'PageView');
                          `}
                     </Script>
+
                     <noscript>
                          <img
                               height="1"
                               width="1"
-                              style={{ display: "none" }}
-                              src={`https://www.facebook.com/tr?id=5596665852661106&ev=PageView&noscript=1`}
+                              className="hidden"
+                              src="https://www.facebook.com/tr?id=528408153212828&ev=PageView&noscript=1"
                          />
                     </noscript>
                </body>
