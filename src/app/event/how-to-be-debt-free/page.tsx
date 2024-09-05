@@ -10,7 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-     title: "Live Workshop - Starting 2025 stronger!",
+     title: "Live Workshop - Unlocking Your Wealthy Life By Design!",
      description:
           "Are you tired of traditional life insurance policies that offer limited growth potential? Are you looking for a financial vehicle that can help you build wealth, protect your family, and enjoy tax-efficient growth? Look no further than Index Universal Life (IUL) insurance.",
 };
@@ -72,7 +72,7 @@ export default function EventsPage() {
                <HeroSection image="/modern-business-buildings-financial-district.jpg">
                     <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
                          <h1 className="mb-2 text-2xl font-bold lg:text-6xl">
-                              Starting 2025 stronger, <br /> A secret to <br />{" "}
+                              Unlocking your wealthy life by design, A secret to
                               Financial Freedom
                          </h1>
                          <p className="max-w-2xl text-lg lg:text-2xl">
@@ -407,39 +407,6 @@ export default function EventsPage() {
                               <div className="flex flex-col flex-wrap place-items-start lg:flex-row">
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
-                                        Retirement Planning
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Debt Management
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Credit and Debit Card Basics
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Estate Planning
-                                   </div>
-
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Investment Portfolios
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Income Growth and Protection
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Mortgage Protection
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Side hustles / Passive income Generation
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
                                         Building Credits & Credit Repair
                                    </div>
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
@@ -449,6 +416,38 @@ export default function EventsPage() {
                                    <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
                                         <Mail className="h-12 w-12 shrink-0" />
                                         Budgeting and Financial Planning
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Investment Portfolios
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Side hustles / Passive income Generation
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Income Growth and Protection
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Estate Planning
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Credit and Debit Card Basics
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Mortgage Protection
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Retirement Planning
+                                   </div>
+                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
+                                        <Mail className="h-12 w-12 shrink-0" />
+                                        Estate Planning
                                    </div>
                               </div>
                               <Button
