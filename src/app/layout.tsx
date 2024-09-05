@@ -1,6 +1,7 @@
 import Footer from "@/components/ui/footer";
 import NavBar from "@/components/ui/nav-bar";
 import { COMPANY_PROFILE } from "@/utils/const";
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
@@ -38,6 +39,8 @@ export default function RootLayout({
                     {children}
                     <Footer />
                     <Toaster richColors />
+                    <Analytics />
+
                     <Script id="facebook-pixel" strategy="afterInteractive">
                          {`
                               !function(f,b,e,v,n,t,s)
@@ -52,7 +55,6 @@ export default function RootLayout({
                               fbq('track', 'PageView');
                          `}
                     </Script>
-
                     <noscript>
                          <img
                               height="1"

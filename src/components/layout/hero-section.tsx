@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { ReactNode } from "react";
 
@@ -13,7 +14,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
      className,
 }) => {
      return (
-          <div className="relative min-h-[calc(120svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[80svh]">
+          <div
+               className={cn(
+                    "relative min-h-[calc(120svh-68px)] bg-teal-900 pb-16 text-white lg:min-h-[100svh] xl:min-h-[80svh]",
+                    className,
+               )}
+          >
                <div className="absolute inset-0 h-full w-full">
                     <Image
                          src={image}
