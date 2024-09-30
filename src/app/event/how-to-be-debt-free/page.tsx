@@ -10,7 +10,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const EVENT_DETAILS = {
+const EVENT_DETAILS = {
      name: "Unlocking your wealthy life by design, A secret to Financial Freedom",
      desc: "Discover proven methods and strategies for eliminating debt, creating a sustainable budget, increasing your income, setting up your child for financial success and investing wisely for a secure financial future.",
      metaTitle: "Live Workshop - Unlocking Your Wealthy Life By Design!",
