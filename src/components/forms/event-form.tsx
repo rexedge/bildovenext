@@ -97,11 +97,11 @@ export function EventForm() {
                                         >
                                              <FormItem className="flex items-center space-x-3 space-y-0">
                                                   <FormControl>
-                                                       <RadioGroupItem value="08-08-2024" />
+                                                       <RadioGroupItem value="2024-10-27" />
                                                   </FormControl>
                                                   <FormLabel className="font-normal">
-                                                       September 14, 2024 at
-                                                       12:00 PM EST
+                                                       October 27, 2024 at 11:00
+                                                       PM EST
                                                   </FormLabel>
                                              </FormItem>
                                         </RadioGroup>

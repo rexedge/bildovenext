@@ -4,67 +4,75 @@ import HeroSection from "@/components/layout/hero-section";
 import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { format } from "date-fns";
 import { Mail } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-     title: "Live Workshop - Unlocking Your Wealthy Life By Design!",
-     description:
+export const EVENT_DETAILS = {
+     name: "Unlocking your wealthy life by design, A secret to Financial Freedom",
+     desc: "Discover proven methods and strategies for eliminating debt, creating a sustainable budget, increasing your income, setting up your child for financial success and investing wisely for a secure financial future.",
+     metaTitle: "Live Workshop - Unlocking Your Wealthy Life By Design!",
+     metaDesc:
           "Are you tired of traditional life insurance policies that offer limited growth potential? Are you looking for a financial vehicle that can help you build wealth, protect your family, and enjoy tax-efficient growth? Look no further than Index Universal Life (IUL) insurance.",
+     date: "2024-11-27T11:00",
+     venueName: "Christ Apostolic Church of Chicago",
+     venueAddress: "15015 GrantAvenue, Room 19, Dolton, IL 60419.",
+     images: [
+          [
+               {
+                    image: "/team/afolabi-adeniran.jpg",
+                    name: "Afolabi Adeniran",
+                    designation: "Financial Strategist",
+               },
+               {
+                    image: "/foluke.jpg",
+                    name: "Foluke Oladipo",
+                    designation: "Financial Strategist",
+               },
+               {
+                    image: "/team/olatubosun-oladipo.jpg",
+                    name: "Olatubosun Oladipo",
+                    designation: "Financial Strategist",
+               },
+          ],
+          [
+               {
+                    image: "/team/olubunmi-adeboye.jpg",
+                    name: "Olubunmi Adeboye",
+                    designation: "Financial Strategist",
+               },
+               {
+                    image: "/team/gbadebo-adeboye.jpg",
+                    name: "Gbadebo Adeboye",
+                    designation: "Financial Strategist",
+               },
+               {
+                    image: "/team/elfrida-majekodunmi.jpg",
+                    name: "Elfrida Majekodunmi",
+                    designation: "Financial Strategist",
+               },
+          ],
+          [
+               {
+                    image: "/team/bukky-chukwu.jpg",
+                    name: "Bukky Chukwu",
+                    designation: "Financial Strategist",
+               },
+               {
+                    image: "/team/abel-adedeji.jpg",
+                    name: "Abel Adedeji",
+                    designation: "Financial Strategist",
+               },
+          ],
+     ],
 };
-const images1 = [
-     {
-          image: "/foluke.jpg",
-          name: "Foluke Oladipo",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/michael-shusi.jpg",
-          name: "Michael Shusi",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/blessing-oladipo.jpg",
-          name: "Blessing Oladipo",
-          designation: "Financial Strategist",
-     },
-];
-const images2 = [
-     {
-          image: "/team/emmanuel-oso.jpg",
-          name: "Emmanuel Oso",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/foluke-oladele.jpg",
-          name: "Foluke Oladele",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/dare-adeniyi.jpg",
-          name: "Dare Adeniyi",
-          designation: "Financial Strategist",
-     },
-];
-const images3 = [
-     {
-          image: "/team/oladele-olaoye.jpg",
-          name: "Oladele Olaoye",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/funmi-ogunsola.jpg",
-          name: "Funmi Ogunsola",
-          designation: "Financial Strategist",
-     },
-     {
-          image: "/team/nosa-owens.jpg",
-          name: "Nosa Owens",
-          designation: "Financial Strategist",
-     },
-];
+
+export const metadata: Metadata = {
+     title: EVENT_DETAILS.metaTitle,
+     description: EVENT_DETAILS.metaDesc,
+};
 
 export default function EventsPage() {
      return (
@@ -72,27 +80,23 @@ export default function EventsPage() {
                <HeroSection image="/modern-business-buildings-financial-district.jpg">
                     <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
                          <h1 className="mb-2 text-2xl font-bold lg:text-6xl">
-                              Unlocking your wealthy life by design, A secret to
-                              Financial Freedom
+                              {EVENT_DETAILS.name}
                          </h1>
                          <p className="max-w-2xl text-lg lg:text-2xl">
-                              Discover proven methods and strategies for
-                              eliminating debt, creating a sustainable budget,
-                              increasing your income, setting up your child for
-                              financial success and investing wisely for a
-                              secure financial future.
+                              {EVENT_DETAILS.desc}
                          </p>
                          <Link href={"#"} className="font-bold lg:text-3xl">
-                              Saturday, September 14th at 12:00 PM
+                              {format(
+                                   EVENT_DETAILS.date,
+                                   "eeee, MMMM do, hh:mm bbb",
+                              )}
                          </Link>
                          <div className="text-lg lg:text-2xl">
                               <div className="font-bold">
-                                   Holiday Inn Express Hotel & Suite,
-                                   Lawrenceville, an IHG Hotel
+                                   {EVENT_DETAILS.venueName}
                               </div>
                               <div className="">
-                                   520 John B, Wilson Court <br />
-                                   Lawrenceville, GA.
+                                   {EVENT_DETAILS.venueAddress}
                               </div>
                          </div>
                          <Button
@@ -320,9 +324,9 @@ export default function EventsPage() {
                     <MaxWidthWrapper className="flex flex-col gap-6 lg:flex-row-reverse">
                          <div className="flex grow flex-col justify-center gap-4 text-center lg:col-span-2 lg:text-start">
                               <div className="flex w-full flex-col items-center justify-center pb-6 lg:col-span-2">
-                                   <ImageList data={images1} />
-                                   <ImageList data={images2} />
-                                   <ImageList data={images3} />
+                                   <ImageList data={EVENT_DETAILS.images[0]} />
+                                   <ImageList data={EVENT_DETAILS.images[1]} />
+                                   <ImageList data={EVENT_DETAILS.images[2]} />
                               </div>
                          </div>
                          <div className="">
