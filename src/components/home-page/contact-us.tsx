@@ -3,319 +3,239 @@
 "use client";
 import { COMPANY_PROFILE } from "@/utils/const";
 import FormatAddress from "@/utils/format-address";
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { toast } from "sonner";
+import { Loader2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
 
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
+const contactSchema = z.object({
+  name: z.string().min(2, "Please enter your name."),
+  email: z.string().email("Please enter a valid email."),
+  subject: z.string().min(3, "Subject is too short."),
+  message: z.string().min(10, "Tell us a bit more (10+ characters)."),
+});
 
-const initialFormData: FormData = {
-  name: "",
-  email: "",
-  subject: "",
-  message: "",
-};
+type ContactValues = z.infer<typeof contactSchema>;
 
 export default function ContactUs() {
-  const [formData, setFormData] = useState<FormData>(initialFormData);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [successModal, setSuccessModal] = useState<boolean>(false);
-  const [failureModal, setFailureModal] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
+  const form = useForm<ContactValues>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: { name: "", email: "", subject: "", message: "" },
+  });
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (values: ContactValues) => {
     setLoading(true);
-
-    const response = await fetch("api/sendmail", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    if (response.ok) {
+    try {
+      const response = await fetch("/api/sendmail", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) throw new Error("Request failed");
+      toast.success("Message sent", {
+        description: "We'll get back to you within one business day.",
+      });
+      form.reset();
+    } catch {
+      toast.error("Could not send message", {
+        description: "Please try again or email us directly.",
+      });
+    } finally {
       setLoading(false);
-      setSuccessModal(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }
-
-    if (!response.ok) {
-      setLoading(false);
-      setFailureModal(true);
     }
   };
 
   return (
-    <section className="px-10 py-20 text-stone-800 bg-stone-50">
-      <div className="text-center text-2xl lg:text-3xl font-normal mb-5 lg:mb-10 uppercase">
-        Contact Us
-      </div>
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-14">
-        <form className="" onSubmit={handleSubmit} method="POST">
-          <div className="">
-            <div className="mt-5 grid grid-cols-2 gap-5">
-              <div className="col-span-2 md:col-span-1">
-                <label
-                  htmlFor="name"
-                  className="text-xs uppercase font-semibold"
-                >
-                  Your Name
-                </label>
-                <>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Name"
-                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 mt-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </>
-              </div>
-
-              <div className="col-span-2 md:col-span-1">
-                <label
-                  htmlFor="email"
-                  className="text-xs uppercase font-semibold"
-                >
-                  Email Address
-                </label>
-                <div className="mt-2">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter Email"
-                    autoComplete="email"
-                    className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="mt-5">
-              <label
-                htmlFor="subject"
-                className="text-xs uppercase font-semibold"
-              >
-                Subject
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  placeholder="Enter subject"
-                  autoComplete="subject"
-                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-            <div className="mt-5">
-              <label
-                htmlFor="message"
-                className="text-xs uppercase font-semibold"
-              >
-                Message
-              </label>
-              <div className="mt-2">
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={3}
-                  className="w-full bg-teal-100  border-spacing-1 rounded-lg p-2 text-stone-800 placeholder:text-slate-300 focus:outline-none border border-teal-300 focus:border-red-300"
-                  placeholder="Write a few sentences."
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-6 flex items-center justify-start gap-x-6">
-            <Button
-              type="submit"
-              disabled={loading}
-              className="rounded-md bg-teal-600 px-10 py-2 uppercase font-semibold shadow-sm hover:bg-teal-700 tracking-wider"
-            >
-              {loading ? (
-                <div className="flex">
-                  <svg
-                    version="1.1"
-                    id="L7"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 100 100"
-                    enable-background="new 0 0 100 100"
-                    xmlSpace="preserve"
-                    width={24}
-                    height={24}
-                    className="mr-3"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M31.6,3.5C5.9,13.6-6.6,42.7,3.5,68.4c10.1,25.7,39.2,38.3,64.9,28.1l-3.1-7.9c-21.3,8.4-45.4-2-53.8-23.3
-  c-8.4-21.3,2-45.4,23.3-53.8L31.6,3.5z"
-                    >
-                      <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        dur="2s"
-                        from="0 50 50"
-                        to="360 50 50"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <path
-                      fill="currentColor"
-                      d="M42.3,39.6c5.7-4.3,13.9-3.1,18.1,2.7c4.3,5.7,3.1,13.9-2.7,18.1l4.1,5.5c8.8-6.5,10.6-19,4.1-27.7
-  c-6.5-8.8-19-10.6-27.7-4.1L42.3,39.6z"
-                    >
-                      <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        dur="1s"
-                        from="0 50 50"
-                        to="-360 50 50"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                    <path
-                      fill="currentColor"
-                      d="M82,35.7C74.1,18,53.4,10.1,35.7,18S10.1,46.6,18,64.3l7.6-3.4c-6-13.5,0-29.3,13.5-35.3s29.3,0,35.3,13.5
-  L82,35.7z"
-                    >
-                      <animateTransform
-                        attributeName="transform"
-                        attributeType="XML"
-                        type="rotate"
-                        dur="2s"
-                        from="0 50 50"
-                        to="360 50 50"
-                        repeatCount="indefinite"
-                      />
-                    </path>
-                  </svg>
-                  <span>Processing...</span>
-                </div>
-              ) : (
-                <span>send</span>
-              )}
-            </Button>
-          </div>
-        </form>
-        <div className="flex flex-col justify-center">
-          <div className="text-xl font-bold mb-4">
-            Have questions or want to schedule a consultation?
-          </div>
-          <p className="w-4/5 lg:w-11/12">
-            Reach out to us today. We&apos;re here to address your inquiries and
-            provide the guidance you need to achieve financial success.
+    <section className="relative isolate overflow-hidden bg-muted/30 py-20 md:py-28">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,theme(colors.primary/12),transparent_55%)]" />
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mx-auto max-w-2xl text-center mb-14"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-primary mb-4">
+            Get in touch
+          </span>
+          <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight text-balance">
+            Let&apos;s build your financial future
+          </h2>
+          <p className="mt-4 text-muted-foreground text-balance">
+            Have questions or want to schedule a consultation? Reach out and our
+            team will respond promptly.
           </p>
-          <div className="flex mt-5 gap-x-3">
-            <div className="">
-              <div className="font-bold">Office Address</div>
-              <div className="">
-                <FormatAddress address={COMPANY_PROFILE.address} />
+        </motion.div>
+
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-3 rounded-2xl border border-border/60 bg-background/80 backdrop-blur p-6 md:p-8 shadow-sm"
+          >
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-5"
+              >
+                <div className="grid md:grid-cols-2 gap-5">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Your name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Jane Doe" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Email address</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="email"
+                            autoComplete="email"
+                            placeholder="you@example.com"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                <FormField
+                  control={form.control}
+                  name="subject"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Subject</FormLabel>
+                      <FormControl>
+                        <Input placeholder="How can we help?" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          rows={5}
+                          placeholder="Share a few details about your goals."
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <Button
+                  type="submit"
+                  size="lg"
+                  disabled={loading}
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20"
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Sending
+                    </>
+                  ) : (
+                    <>
+                      <Send className="mr-2 h-4 w-4" />
+                      Send message
+                    </>
+                  )}
+                </Button>
+              </form>
+            </Form>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-2 space-y-5"
+          >
+            <div className="rounded-2xl border border-border/60 bg-background/60 p-6">
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-semibold">Office Address</p>
+                  <div className="mt-1 text-sm text-muted-foreground">
+                    <FormatAddress address={COMPANY_PROFILE.address} />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="flex mt-5 gap-x-3">
-            <div className="">
-              <div className="font-bold">Phone</div>
-              <div className="">{COMPANY_PROFILE.phone}</div>
+            <div className="rounded-2xl border border-border/60 bg-background/60 p-6">
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Phone className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-semibold">Phone</p>
+                  <a
+                    href={`tel:${COMPANY_PROFILE.phone.replace(/[^0-9+]/g, "")}`}
+                    className="mt-1 block text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {COMPANY_PROFILE.phone}
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex mt-5 gap-x-3">
-            <div className="">
-              <div className="font-bold">Email Address</div>
-              <div className="">{COMPANY_PROFILE.email}</div>
+            <div className="rounded-2xl border border-border/60 bg-background/60 p-6">
+              <div className="flex items-start gap-4">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <div>
+                  <p className="font-semibold">Email Address</p>
+                  <a
+                    href={`mailto:${COMPANY_PROFILE.email}`}
+                    className="mt-1 block text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                  >
+                    {COMPANY_PROFILE.email}
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
-      <AnimatePresence>
-        {successModal && (
-          <motion.div
-            className="fixed backdrop-blur-[2px] top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-green-500 bg-opacity-20 z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.div
-              className="bg-teal-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center"
-              initial={{ opacity: 0, y: -1000 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -1000 }}
-              transition={{ duration: 0.3 }}
-            >
-              <p className="mb-2">Message sent Succesfully!!!</p>
-              <Button
-                className="mt-4 outline outline-green-500 bg-green-200  w-full"
-                onClick={() => setSuccessModal(false)}
-              >
-                Close
-              </Button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <AnimatePresence>
-        {failureModal && (
-          <motion.div
-            className="fixed backdrop-blur-[2px] top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-red-500 bg-opacity-20 z-50"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <motion.div
-              className="bg-teal-100  p-10 rounded-lg flex flex-col h-72 w-72 items-center justify-center"
-              initial={{ opacity: 0, y: 1000 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 1000 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-            >
-              <p className="mb-2">Message not sent!!!</p>
-              <Button
-                className="mt-4 outline outline-red-500 bg-red-200 w-full"
-                onClick={() => setFailureModal(false)}
-              >
-                Close
-              </Button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }
