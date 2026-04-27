@@ -1,6 +1,12 @@
 import ProductList from '@/components/product-page/products';
 import Hero from '@/components/ui/hero';
+import { Metadata } from 'next';
 import React from 'react';
+
+export const metadata: Metadata = {
+	title: 'Products',
+	description: 'Bildove financial services product list',
+};
 
 export default function Products() {
 	return (
