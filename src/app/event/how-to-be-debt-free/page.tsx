@@ -1,25 +1,38 @@
+/** @format */
+
 import { EventForm } from "@/components/forms/event-form";
 import ImageList from "@/components/image-list";
-import HeroSection from "@/components/layout/hero-section";
-import MaxWidthWrapper from "@/components/layout/max-width-wrapper";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { format } from "date-fns";
-import { Mail } from "lucide-react";
+import {
+     ArrowUpRight,
+     CalendarDays,
+     CheckCircle2,
+     GraduationCap,
+     Lightbulb,
+     MapPin,
+     Mic2,
+     ShieldCheck,
+     Sparkles,
+     TrendingUp,
+     Users,
+     Wallet,
+} from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 const EVENT_DETAILS = {
-     name: "Unlocking your wealthy life by design, A secret to Financial Freedom",
-     desc: "Discover proven methods and strategies for eliminating debt, creating a sustainable budget, increasing your income, setting up your child for financial success and investing wisely for a secure financial future.",
-     metaTitle: "Live Workshop - Unlocking Your Wealthy Life By Design!",
+     name: "Unlocking your wealthy life by design — A secret to financial freedom",
+     shortName: "How to be debt free",
+     desc: "Discover proven methods and strategies for eliminating debt, creating a sustainable budget, increasing your income, setting up your child for financial success, and investing wisely for a secure financial future.",
+     metaTitle: "Live Workshop · Unlocking your wealthy life by design",
      metaDesc:
-          "Are you tired of traditional life insurance policies that offer limited growth potential? Are you looking for a financial vehicle that can help you build wealth, protect your family, and enjoy tax-efficient growth? Look no further than Index Universal Life (IUL) insurance.",
+          "A free live workshop on debt elimination, smart budgeting, IUL strategies, and building generational wealth — hosted by Bildove Financial.",
      date: "2024-11-27T11:00",
      venueName: "Christ Apostolic Church of Chicago",
-     venueAddress: "15015 GrantAvenue, Room 19, Dolton, IL 60419.",
-     images: [
+     venueAddress: "15015 Grant Avenue, Room 19, Dolton, IL 60419",
+     hosts: [
           [
                {
                     image: "/team/afolabi-adeniran.jpg",
@@ -69,413 +82,487 @@ const EVENT_DETAILS = {
      ],
 };
 
+const PRESS_LOGOS = [
+     { src: "/companies/Forbes.png", alt: "Forbes" },
+     { src: "/companies/icn.png", alt: "ICN" },
+     { src: "/companies/kip.png", alt: "Kiplinger" },
+     { src: "/companies/marketwatch.png", alt: "MarketWatch" },
+     { src: "/companies/msn.png", alt: "MSN" },
+     { src: "/companies/usa-today.png", alt: "USA Today" },
+];
+
+const BENEFITS = [
+     {
+          n: "01",
+          icon: Wallet,
+          title: "Eliminate debt — for good",
+          body: "Practical, personalised debt-repayment plans that get you to financial freedom faster.",
+     },
+     {
+          n: "02",
+          icon: GraduationCap,
+          title: "Set your kids up early",
+          body: "How to build credit and a financial foundation for your teens and first-time builders.",
+     },
+     {
+          n: "03",
+          icon: ShieldCheck,
+          title: "A budget that holds",
+          body: "Create a sustainable budget, build an emergency fund, and invest with confidence.",
+     },
+     {
+          n: "04",
+          icon: TrendingUp,
+          title: "Tax-free Social Security",
+          body: "Strategies to receive up to 100% of your Social Security benefits tax-free.",
+     },
+     {
+          n: "05",
+          icon: Lightbulb,
+          title: "An abundance mindset",
+          body: "Shift from scarcity to abundance and make decisions that attract real wealth.",
+     },
+     {
+          n: "06",
+          icon: Sparkles,
+          title: "Build generational wealth",
+          body: "Lay the perfect foundation for your dream retirement and the legacy after it.",
+     },
+];
+
+const TOPICS = [
+     "Building credit & credit repair",
+     "Debt management",
+     "Budgeting and financial planning",
+     "Investment portfolios",
+     "Side hustles & passive income",
+     "Income growth and protection",
+     "Estate planning",
+     "Credit and debit card basics",
+     "Mortgage protection",
+     "Retirement planning",
+     "IUL & tax-efficient growth",
+     "Sequence-of-returns risk",
+];
+
 export const metadata: Metadata = {
      title: EVENT_DETAILS.metaTitle,
      description: EVENT_DETAILS.metaDesc,
 };
 
-export default function EventsPage() {
+export default function HowToBeDebtFreePage() {
      return (
-          <>
-               <HeroSection image="/modern-business-buildings-financial-district.jpg">
-                    <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10 text-center lg:text-start">
-                         <h1 className="mb-2 text-2xl font-bold lg:text-6xl">
-                              {EVENT_DETAILS.name}
-                         </h1>
-                         <p className="max-w-2xl text-lg lg:text-2xl">
-                              {EVENT_DETAILS.desc}
-                         </p>
-                         <Link href={"#"} className="font-bold lg:text-3xl">
-                              {format(
-                                   EVENT_DETAILS.date,
-                                   "eeee, MMMM do, hh:mm bbb",
-                              )}
-                         </Link>
-                         <div className="text-lg lg:text-2xl">
-                              <div className="font-bold">
-                                   {EVENT_DETAILS.venueName}
+          <main className="flex min-h-screen flex-col overflow-x-hidden bg-background">
+               {/* HERO */}
+               <section className="relative isolate overflow-hidden pb-20 pt-16 md:pb-28 md:pt-24">
+                    <div className="gradient-mesh absolute inset-0 -z-10" />
+                    <div
+                         aria-hidden
+                         className="absolute inset-0 -z-10 opacity-[0.04] [background-image:linear-gradient(hsl(var(--foreground))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground))_1px,transparent_1px)] [background-size:64px_64px]"
+                    />
+                    <div
+                         aria-hidden
+                         className="absolute -right-24 -top-32 -z-10 h-[480px] w-[480px] rounded-full bg-accent/25 blur-3xl"
+                    />
+                    <div
+                         aria-hidden
+                         className="absolute -left-32 top-1/2 -z-10 h-[420px] w-[420px] rounded-full bg-primary/25 blur-3xl"
+                    />
+
+                    <div className="container mx-auto px-6">
+                         <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-14">
+                              <div className="lg:col-span-8">
+                                   <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-primary">
+                                        <span className="relative flex h-2 w-2">
+                                             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                                             <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                                        </span>
+                                        /Live workshop · Free seat
+                                   </span>
+                                   <h1 className="text-balance font-display text-[14vw] font-semibold leading-[0.9] tracking-[-0.04em] sm:text-[10vw] md:text-[8.5vw] lg:text-[7.5rem]">
+                                        How to be
+                                        <br />
+                                        <em className="gradient-text not-italic">
+                                             debt free.
+                                        </em>
+                                   </h1>
+                                   <p className="mt-8 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
+                                        {EVENT_DETAILS.desc}
+                                   </p>
+
+                                   <div className="mt-10 flex flex-wrap gap-3">
+                                        <Button
+                                             asChild
+                                             size="lg"
+                                             className="group rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
+                                        >
+                                             <Link href="#registration-form">
+                                                  Reserve my seat
+                                                  <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform group-hover:rotate-45" />
+                                             </Link>
+                                        </Button>
+                                        <Button
+                                             asChild
+                                             size="lg"
+                                             variant="outline"
+                                             className="rounded-full border-border bg-background"
+                                        >
+                                             <Link href="#agenda">
+                                                  View agenda
+                                             </Link>
+                                        </Button>
+                                   </div>
                               </div>
-                              <div className="">
-                                   {EVENT_DETAILS.venueAddress}
-                              </div>
-                         </div>
-                         <Button
-                              asChild
-                              size={"lg"}
-                              className="mx-auto max-w-min bg-teal-600 text-xl hover:bg-teal-700 lg:ml-0.5 lg:py-2"
-                         >
-                              <Link href={"#registration-form"}>
-                                   Get Started
-                              </Link>
-                         </Button>
-                    </MaxWidthWrapper>
-               </HeroSection>
-               <div className="bg-teal-800 text-white">
-                    <MaxWidthWrapper className="grid gap-5 px-5 py-10">
-                         <div className="text-center text-xl lg:text-2xl">
-                              Secure Your Benefits has been featured in the
-                              following publications:
-                         </div>
-                         <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:grid-cols-6">
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/Forbes.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/icn.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/kip.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/marketwatch.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/msn.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                              <div className="flex h-auto w-full items-center justify-center">
-                                   <Image
-                                        alt=""
-                                        src={"/companies/usa-today.png"}
-                                        height={80}
-                                        width={240}
-                                        className="w-full object-contain"
-                                   />
-                              </div>
-                         </div>
-                    </MaxWidthWrapper>
-               </div>
-               <div className="grid bg-white">
-                    <div className="m-6 grid gap-6 py-6 lg:m-0 lg:grid-cols-2 lg:py-0">
-                         <div className="flex h-52 w-full items-center justify-center overflow-hidden">
-                              <Image
-                                   alt=""
-                                   src={"/financial-advice.jpg"}
-                                   height={600}
-                                   width={1800}
-                                   className="w-full object-cover"
-                              />
-                         </div>
-                         <div className="flex flex-col justify-center gap-4 text-center lg:text-start">
-                              <p className="max-w-2xl text-2xl">
-                                   We believe that education leads to
-                                   confidence, and confidence to peace of mind.
-                              </p>
-                              <Button
-                                   asChild
-                                   size={"lg"}
-                                   className="mx-auto max-w-min bg-teal-600 text-xl hover:bg-teal-700 lg:ml-0.5 lg:py-2"
-                              >
-                                   <Link href={"#registration-form"}>
-                                        Get Started
-                                   </Link>
-                              </Button>
+
+                              {/* Event meta card */}
+                              <aside className="lg:col-span-4">
+                                   <div className="space-y-5 rounded-3xl border border-border/60 bg-card/80 p-6 shadow-sm backdrop-blur md:p-7">
+                                        <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                                             /Event details
+                                        </p>
+                                        <div className="flex items-start gap-3">
+                                             <CalendarDays className="mt-0.5 h-5 w-5 text-primary" />
+                                             <div>
+                                                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       When
+                                                  </p>
+                                                  <p className="font-display text-lg font-semibold tracking-tight">
+                                                       {format(
+                                                            EVENT_DETAILS.date,
+                                                            "eeee, MMMM do",
+                                                       )}
+                                                  </p>
+                                                  <p className="text-sm text-muted-foreground">
+                                                       {format(
+                                                            EVENT_DETAILS.date,
+                                                            "h:mm a",
+                                                       )}{" "}
+                                                       CST
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                             <MapPin className="mt-0.5 h-5 w-5 text-primary" />
+                                             <div>
+                                                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       Where
+                                                  </p>
+                                                  <p className="font-medium text-foreground">
+                                                       {EVENT_DETAILS.venueName}
+                                                  </p>
+                                                  <p className="text-sm text-muted-foreground">
+                                                       {
+                                                            EVENT_DETAILS.venueAddress
+                                                       }
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div className="flex items-start gap-3">
+                                             <Mic2 className="mt-0.5 h-5 w-5 text-primary" />
+                                             <div>
+                                                  <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       Hosted by
+                                                  </p>
+                                                  <p className="font-medium text-foreground">
+                                                       Bildove Financial Team
+                                                  </p>
+                                                  <p className="text-sm text-muted-foreground">
+                                                       8 strategists · 1 mission
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <div className="grid grid-cols-3 gap-2 border-t border-border/60 pt-4 text-center">
+                                             <div className="rounded-2xl border border-border/60 bg-background/60 p-3">
+                                                  <p className="font-display text-xl font-semibold text-primary">
+                                                       90m
+                                                  </p>
+                                                  <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       Live
+                                                  </p>
+                                             </div>
+                                             <div className="rounded-2xl border border-border/60 bg-background/60 p-3">
+                                                  <p className="font-display text-xl font-semibold text-primary">
+                                                       Q&amp;A
+                                                  </p>
+                                                  <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       Open
+                                                  </p>
+                                             </div>
+                                             <div className="rounded-2xl border border-border/60 bg-background/60 p-3">
+                                                  <p className="font-display text-xl font-semibold text-primary">
+                                                       $0
+                                                  </p>
+                                                  <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.2em] text-muted-foreground">
+                                                       Cost
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </aside>
                          </div>
                     </div>
-               </div>
-               <div className="bg-teal-800 px-5 py-10 text-white">
-                    <MaxWidthWrapper className="grid gap-6 lg:grid-cols-5">
-                         <div className="flex flex-col justify-center gap-4 text-center lg:col-span-2 lg:text-start">
-                              <h3 className="text-xl text-yellow-500">
-                                   Free Workshop!
-                              </h3>
-                              <p className="max-w-2xl font-serif text-2xl lg:text-5xl">
-                                   You will benefit from this seminar by
-                                   learning:
-                              </p>
-                              <Button
-                                   asChild
-                                   size={"lg"}
-                                   className="mx-auto max-w-min bg-yellow-600 text-xl hover:bg-yellow-700 lg:ml-0.5 lg:py-2"
-                              >
-                                   <Link href={"#registration-form"}>
-                                        Get Started
-                                   </Link>
-                              </Button>
-                         </div>
-                         <ul className="flex list-decimal flex-col justify-center gap-3 px-6 text-xl lg:col-span-3">
-                              <li>
-                                   Gain actionable steps to overcome debt: Learn
-                                   practical strategies and create a
-                                   personalized debt repayment plan to achieve
-                                   financial freedom faster.
-                              </li>
-                              <li>
-                                   How to set your child up early for financial
-                                   success.
-                              </li>
-                              <li>
-                                   Credit building strategies for your teens and
-                                   first time builders.
-                              </li>
-                              <li>
-                                   Build a strong financial foundation: Discover
-                                   how to create and maintain a sustainable
-                                   budget, establish an emergency fund, and
-                                   invest wisely for long-term financial
-                                   security.
-                              </li>
-                              <li>
-                                   Ways to receive up to 100% of your Social
-                                   Security benefits tax-free.
-                              </li>
-                              <li>
-                                   Develop a mindset of abundance: Shift your
-                                   perspective from scarcity to abundance,
-                                   empowering you to make informed financial
-                                   decisions and attract wealth.
-                              </li>
-                         </ul>
-                    </MaxWidthWrapper>
-               </div>
-               <div className="grid bg-white">
-                    <MaxWidthWrapper className="mx-auto grid gap-6 lg:grid-cols-5">
-                         <div className="flex h-96 w-full items-center justify-center overflow-hidden p-6 lg:col-span-2">
-                              <Image
-                                   alt=""
-                                   src={"/presentation.jpg"}
-                                   height={600}
-                                   width={1800}
-                                   className="h-full w-full object-cover"
-                              />
-                         </div>
-                         <div className="flex flex-col justify-center gap-4 pb-6 text-center lg:col-span-3 lg:text-start">
-                              <h2 className="text-2xl">
-                                   This presentation will cover:
-                              </h2>
-                              <ul className="flex list-inside list-disc flex-col justify-center px-6 text-start text-lg">
-                                   <li>
-                                        Credit building for beginner, Mending
-                                        credit and Debt management
-                                   </li>
-                                   <li>
-                                        The uncertain future of Social Security
-                                        and what other options are available.
-                                   </li>
-                                   <li>Projections for the years AHEAD</li>
-                                   <li>
-                                        Why income that lasts is important
-                                        during retirement.
-                                   </li>
-                                   <li>
-                                        Common myths associated with annuities
-                                        and the truth about how they function.
-                                   </li>
-                                   <li>
-                                        What &quot;sequence of returns
-                                        withdrawing&quot; means and how you can
-                                        benefit from it.
-                                   </li>
-                                   <li>
-                                        How to lay the perfect foundation for
-                                        your dream retirement.
-                                   </li>
-                              </ul>
-                              <Button
-                                   asChild
-                                   size={"lg"}
-                                   className="mx-auto max-w-min bg-teal-600 text-xl hover:bg-teal-700 lg:ml-0.5 lg:py-2"
-                              >
-                                   <Link href={"#registration-form"}>
-                                        Get Started
-                                   </Link>
-                              </Button>
-                         </div>
-                    </MaxWidthWrapper>
-               </div>
-               <div className="grid gap-6 bg-teal-800 px-5 py-10 text-white">
-                    <MaxWidthWrapper className="text-center lg:text-left">
-                         <h3 className="text-xl text-yellow-500">
-                              Meet your host team:
-                         </h3>
-                         <p className="max-w-2xl font-serif text-2xl lg:text-4xl">
-                              Bildove Financial Team
+               </section>
+
+               {/* PRESS STRIP */}
+               <section className="relative isolate border-y border-border/60 bg-foreground py-10 text-background">
+                    <div className="container mx-auto px-6">
+                         <p className="mb-6 text-center font-mono text-[10px] uppercase tracking-[0.25em] text-background/60 lg:text-left">
+                              /As featured in
                          </p>
-                    </MaxWidthWrapper>
-                    <MaxWidthWrapper className="flex flex-col gap-6 lg:flex-row-reverse">
-                         <div className="flex grow flex-col justify-center gap-4 text-center lg:col-span-2 lg:text-start">
-                              <div className="flex w-full flex-col items-center justify-center pb-6 lg:col-span-2">
-                                   <ImageList data={EVENT_DETAILS.images[0]} />
-                                   <ImageList data={EVENT_DETAILS.images[1]} />
-                                   <ImageList data={EVENT_DETAILS.images[2]} />
-                              </div>
-                         </div>
-                         <div className="">
-                              <div className="flex flex-col justify-center gap-3 text-lg lg:max-w-2xl">
-                                   <p>
-                                        Team Bildove is a dedicated team of
-                                        financial experts committed to providing
-                                        tailored financial solutions for
-                                        individuals, families, businesses,
-                                        groups, and any entity seeking financial
-                                        stability and growth. Our core belief,
-                                        &quot;No family member left
-                                        behind,&quot; extends to every client,
-                                        ensuring that we offer comprehensive
-                                        support across all sectors.
-                                   </p>
-                                   <p>
-                                        Whether you&apos;re an individual
-                                        looking to secure your future, a family
-                                        aiming to build a strong financial
-                                        foundation, a business owner seeking
-                                        growth strategies, or a group in need of
-                                        financial management solutions, Team
-                                        Bildove is your trusted partner. We
-                                        offer a wide range of financial services
-                                        designed to meet the unique needs of
-                                        each client.
-                                   </p>
-                                   <p>
-                                        With our expertise, compassion, and
-                                        commitment, we empower our clients to
-                                        make informed financial decisions,
-                                        achieve their goals, and create a
-                                        prosperous future.
-                                   </p>
-                                   <Button
-                                        asChild
-                                        size={"lg"}
-                                        className="mx-auto max-w-min bg-yellow-600 text-xl hover:bg-yellow-700 lg:ml-0.5 lg:py-2"
+                         <div className="grid grid-cols-3 items-center gap-8 md:grid-cols-6">
+                              {PRESS_LOGOS.map((logo) => (
+                                   <div
+                                        key={logo.src}
+                                        className="relative h-10 w-full opacity-60 transition-opacity hover:opacity-100"
                                    >
-                                        <Link href={"#registration-form"}>
-                                             Get Started
-                                        </Link>
-                                   </Button>
+                                        <Image
+                                             src={logo.src}
+                                             alt={logo.alt}
+                                             fill
+                                             sizes="160px"
+                                             className="object-contain brightness-0 invert"
+                                        />
+                                   </div>
+                              ))}
+                         </div>
+                    </div>
+               </section>
+
+               {/* AGENDA / BENEFITS */}
+               <section id="agenda" className="relative isolate py-20 md:py-28">
+                    <div className="container mx-auto px-6">
+                         <div className="mb-14 grid items-end gap-10 lg:grid-cols-12">
+                              <div className="lg:col-span-7">
+                                   <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
+                                        /What you&apos;ll learn
+                                   </p>
+                                   <h2 className="text-balance font-display text-4xl font-semibold leading-[0.95] tracking-[-0.03em] md:text-6xl">
+                                        Six lessons.
+                                        <br />
+                                        <em className="not-italic text-primary">
+                                             One free hour.
+                                        </em>
+                                   </h2>
+                              </div>
+                              <div className="lg:col-span-5">
+                                   <p className="text-pretty leading-relaxed text-muted-foreground">
+                                        Education leads to confidence.
+                                        Confidence leads to peace of mind.
+                                        We&apos;ve packed the most-asked
+                                        questions from a decade of client work
+                                        into one focused workshop.
+                                   </p>
                               </div>
                          </div>
-                    </MaxWidthWrapper>
-               </div>
-               <div className="">
-                    <MaxWidthWrapper className="grid place-items-center gap-5 px-5 py-10">
-                         <div className="max-w-4xl text-center text-xl lg:text-3xl">
-                              Attend this free educational workshop to learn all
-                              there is to know about attaining financial freedom
-                              before the end of 2024
+
+                         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                              {BENEFITS.map(
+                                   ({ n, icon: Icon, title, body }) => (
+                                        <article
+                                             key={n}
+                                             className="group relative overflow-hidden rounded-3xl border border-border/60 bg-card/80 p-7 backdrop-blur transition-all hover:-translate-y-1 hover:shadow-lg"
+                                        >
+                                             <div
+                                                  aria-hidden
+                                                  className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/5 blur-3xl transition-opacity group-hover:bg-primary/10"
+                                             />
+                                             <div className="mb-6 flex items-center justify-between">
+                                                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-primary/30 bg-primary/10 text-primary">
+                                                       <Icon className="h-5 w-5" />
+                                                  </div>
+                                                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+                                                       /{n}
+                                                  </span>
+                                             </div>
+                                             <h3 className="text-balance font-display text-xl font-semibold tracking-tight">
+                                                  {title}
+                                             </h3>
+                                             <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
+                                                  {body}
+                                             </p>
+                                        </article>
+                                   ),
+                              )}
                          </div>
-                         <Button
-                              asChild
-                              size={"lg"}
-                              className="mx-auto max-w-min bg-teal-600 text-xl hover:bg-teal-700 lg:py-2"
-                         >
-                              <Link href={"#registration-form"}>
-                                   Get Started
-                              </Link>
-                         </Button>
-                    </MaxWidthWrapper>
-               </div>
-               <div className="bg-teal-800 px-5 py-10 text-white">
-                    <h3 className="mb-5 text-center text-2xl lg:text-4xl">
-                         Topics of Discussion Includes:
-                    </h3>
-                    <MaxWidthWrapper className="grid gap-6 lg:grid-cols-5">
-                         <div className="flex h-96 w-full items-center justify-center overflow-hidden lg:col-span-2">
-                              <Image
-                                   alt=""
-                                   src={"/coffee-break.jpg"}
-                                   height={600}
-                                   width={1800}
-                                   className="h-full w-full object-cover"
-                              />
+                    </div>
+               </section>
+
+               {/* TOPICS */}
+               <section className="relative isolate overflow-hidden bg-foreground py-20 text-background md:py-28">
+                    <div
+                         aria-hidden
+                         className="absolute inset-0 -z-10 opacity-[0.06] [background-image:linear-gradient(hsl(var(--background))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--background))_1px,transparent_1px)] [background-size:64px_64px]"
+                    />
+                    <div
+                         aria-hidden
+                         className="absolute -top-32 left-1/4 -z-10 h-96 w-96 rounded-full bg-primary/30 blur-3xl"
+                    />
+
+                    <div className="container mx-auto px-6">
+                         <div className="mb-12 grid items-end gap-10 lg:grid-cols-12">
+                              <div className="lg:col-span-7">
+                                   <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
+                                        /Topics covered
+                                   </p>
+                                   <h2 className="text-balance font-display text-4xl font-semibold leading-[0.95] tracking-[-0.03em] md:text-6xl">
+                                        Everything we
+                                        <br />
+                                        wish someone{" "}
+                                        <em className="not-italic text-primary">
+                                             told us.
+                                        </em>
+                                   </h2>
+                              </div>
+                              <div className="lg:col-span-5">
+                                   <p className="text-pretty leading-relaxed text-background/70">
+                                        A pragmatic curriculum drawn from the
+                                        questions clients ask most often —
+                                        covering the full lifecycle of a
+                                        debt-free, wealth-building household.
+                                   </p>
+                              </div>
                          </div>
-                         <div className="grid items-center px-6 text-xl lg:col-span-3 lg:justify-center">
-                              <div className="flex flex-col flex-wrap place-items-start lg:flex-row">
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Building Credits & Credit Repair
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Debt Management
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Budgeting and Financial Planning
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Investment Portfolios
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Side hustles / Passive income Generation
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Income Growth and Protection
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Estate Planning
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Credit and Debit Card Basics
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Mortgage Protection
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Retirement Planning
-                                   </div>
-                                   <div className="flex w-full items-center gap-3 lg:w-1/2 lg:p-5">
-                                        <Mail className="h-12 w-12 shrink-0" />
-                                        Estate Planning
+
+                         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                              {TOPICS.map((topic, i) => (
+                                   <li
+                                        key={topic}
+                                        className="flex items-start gap-3 rounded-2xl border border-background/15 bg-background/5 px-5 py-4 backdrop-blur transition-colors hover:bg-background/10"
+                                   >
+                                        <span className="mt-1 shrink-0 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
+                                             /{String(i + 1).padStart(2, "0")}
+                                        </span>
+                                        <span className="text-sm leading-snug">
+                                             {topic}
+                                        </span>
+                                   </li>
+                              ))}
+                         </ul>
+                    </div>
+               </section>
+
+               {/* HOSTS */}
+               <section className="relative isolate py-20 md:py-28">
+                    <div className="container mx-auto px-6">
+                         <div className="grid gap-10 lg:grid-cols-12 lg:gap-14">
+                              <div className="lg:col-span-5">
+                                   <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-primary">
+                                        <Users className="h-3 w-3" />
+                                        /Meet your hosts
+                                   </span>
+                                   <h2 className="text-balance font-display text-4xl font-semibold leading-[0.95] tracking-[-0.03em] md:text-6xl">
+                                        Team{" "}
+                                        <em className="not-italic text-primary">
+                                             Bildove.
+                                        </em>
+                                   </h2>
+                                   <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
+                                        A dedicated team of financial experts
+                                        committed to tailored solutions for
+                                        individuals, families, businesses, and
+                                        groups. Our core belief — &quot;no
+                                        family member left behind&quot; —
+                                        extends to every client.
+                                   </p>
+                                   <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+                                        Whether you&apos;re an individual
+                                        securing your future, a family building
+                                        a foundation, or a business owner
+                                        looking for growth strategies, Team
+                                        Bildove is your trusted partner.
+                                   </p>
+                                   <div className="mt-8">
+                                        <Button
+                                             asChild
+                                             size="lg"
+                                             className="group rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
+                                        >
+                                             <Link href="#registration-form">
+                                                  Reserve my seat
+                                                  <ArrowUpRight className="ml-1.5 h-4 w-4 transition-transform group-hover:rotate-45" />
+                                             </Link>
+                                        </Button>
                                    </div>
                               </div>
-                              <Button
-                                   asChild
-                                   size={"lg"}
-                                   className="mx-auto max-w-min bg-yellow-600 text-xl hover:bg-yellow-700 lg:ml-0.5 lg:py-2"
-                              >
-                                   <Link href={"#registration-form"}>
-                                        Get Started
-                                   </Link>
-                              </Button>
+
+                              <div className="lg:col-span-7">
+                                   <div className="rounded-3xl border border-border/60 bg-card/80 p-7 backdrop-blur md:p-10">
+                                        <div className="flex flex-col items-center gap-2">
+                                             <ImageList
+                                                  data={EVENT_DETAILS.hosts[0]}
+                                             />
+                                             <ImageList
+                                                  data={EVENT_DETAILS.hosts[1]}
+                                             />
+                                             <ImageList
+                                                  data={EVENT_DETAILS.hosts[2]}
+                                             />
+                                        </div>
+                                   </div>
+                              </div>
                          </div>
-                    </MaxWidthWrapper>
-               </div>
-               <HeroSection image="/modern-business-buildings-financial-district.jpg">
-                    <MaxWidthWrapper className="flex flex-col justify-center gap-6 py-10">
-                         <Card
-                              id="registration-form"
-                              className="mx-auto w-full max-w-sm p-6"
-                         >
-                              <EventForm />
-                         </Card>
-                    </MaxWidthWrapper>
-               </HeroSection>
-          </>
+                    </div>
+               </section>
+
+               {/* REGISTRATION */}
+               <section
+                    id="registration-form"
+                    className="relative isolate scroll-mt-24 overflow-hidden py-20 md:py-28"
+               >
+                    <div className="gradient-mesh absolute inset-0 -z-10" />
+                    <div
+                         aria-hidden
+                         className="absolute inset-0 -z-10 opacity-[0.04] [background-image:linear-gradient(hsl(var(--foreground))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground))_1px,transparent_1px)] [background-size:64px_64px]"
+                    />
+                    <div
+                         aria-hidden
+                         className="absolute -right-24 -top-32 -z-10 h-[460px] w-[460px] rounded-full bg-accent/25 blur-3xl"
+                    />
+
+                    <div className="container mx-auto px-6">
+                         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-14">
+                              <div className="lg:sticky lg:top-28 lg:col-span-6">
+                                   <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
+                                        /Register · It&apos;s free
+                                   </p>
+                                   <h2 className="text-balance font-display text-4xl font-semibold leading-[0.95] tracking-[-0.03em] md:text-6xl">
+                                        Save your
+                                        <br />
+                                        <em className="gradient-text not-italic">
+                                             seat.
+                                        </em>
+                                   </h2>
+                                   <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
+                                        Limited seats. We&apos;ll send your
+                                        confirmation, the venue map, and a
+                                        calendar invite the moment you register.
+                                   </p>
+
+                                   <ul className="mt-8 space-y-3">
+                                        {[
+                                             "Free admission · no upsell",
+                                             "Live Q&A with the full team",
+                                             "Workbook & resource pack included",
+                                        ].map((perk) => (
+                                             <li
+                                                  key={perk}
+                                                  className="flex items-center gap-3 text-sm text-foreground/90"
+                                             >
+                                                  <CheckCircle2 className="h-4 w-4 shrink-0 text-primary" />
+                                                  {perk}
+                                             </li>
+                                        ))}
+                                   </ul>
+                              </div>
+
+                              <div className="lg:col-span-6">
+                                   <div className="rounded-3xl border border-border/60 bg-card/95 p-6 shadow-xl backdrop-blur md:p-8">
+                                        <EventForm />
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+          </main>
      );
 }
