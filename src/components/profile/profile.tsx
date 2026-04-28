@@ -4,17 +4,31 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import * as Icons from "@/utils/svgs";
 import { motion } from "framer-motion";
 import {
-  Globe2,
-  LinkedinIcon,
-  Mail,
-  MessageSquare,
-  Phone,
-  ShieldCheck,
+    Globe2,
+    LinkedinIcon,
+    Mail,
+    MessageSquare,
+    Phone,
+    ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import BAccordion from "./accordion";
+import BookMeetingDialog from "./book-meeting-dialog";
+import ProfileActions from "./profile-actions";
 import ProfileButton from "./profilebutton";
+import ProfileServices from "./profile-services";
+
+const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+    {...props}
+  >
+    <path d="M19.05 4.91A10 10 0 0 0 4.4 18.3L3 22l3.78-1.38A10 10 0 1 0 19.05 4.9Zm-7.04 15.4a8.4 8.4 0 0 1-4.27-1.17l-.31-.18-2.24.82.83-2.18-.2-.32a8.39 8.39 0 1 1 6.19 3.03Zm4.85-6.27c-.27-.13-1.57-.78-1.81-.86-.24-.09-.42-.13-.6.13-.18.27-.69.86-.85 1.04-.16.18-.31.2-.58.07a6.85 6.85 0 0 1-3.41-2.97c-.26-.45.26-.42.74-1.39.08-.18.04-.34-.02-.47-.07-.13-.6-1.43-.82-1.96-.21-.51-.43-.45-.6-.45h-.51c-.18 0-.47.07-.71.34-.24.27-.93.91-.93 2.21 0 1.31.95 2.57 1.08 2.75.13.18 1.87 2.86 4.54 4.01.63.27 1.13.43 1.51.55.64.2 1.21.17 1.67.1.51-.07 1.57-.64 1.79-1.27.22-.62.22-1.16.16-1.27-.07-.11-.24-.18-.51-.31Z" />
+  </svg>
+);
 
 export default function ProfileComponent() {
   return (
@@ -72,7 +86,7 @@ export default function ProfileComponent() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+              <div className="grid grid-cols-3 md:grid-cols-5 gap-2">
                 <Button
                   asChild
                   className="bg-primary hover:bg-primary/90 rounded-full"
@@ -91,6 +105,19 @@ export default function ProfileComponent() {
                 </Button>
                 <Button
                   asChild
+                  className="bg-[#25D366] hover:bg-[#1ebe57] text-white rounded-full"
+                >
+                  <a
+                    href="https://wa.me/18032501030"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gap-2"
+                  >
+                    <WhatsAppIcon className="h-4 w-4" /> WhatsApp
+                  </a>
+                </Button>
+                <Button
+                  asChild
                   className="bg-primary hover:bg-primary/90 rounded-full"
                 >
                   <a href="mailto:foluke71@gmail.com" className="gap-2">
@@ -100,13 +127,19 @@ export default function ProfileComponent() {
                 <Button
                   asChild
                   variant="outline"
-                  className="rounded-full border-border bg-background"
+                  className="rounded-full border-border bg-background col-span-3 md:col-span-1"
                 >
                   <Link href="/" className="gap-2">
                     <Globe2 className="h-4 w-4" /> Website
                   </Link>
                 </Button>
               </div>
+
+              <BookMeetingDialog />
+
+              <ProfileActions />
+
+              <ProfileServices />
 
               <div>
                 <BAccordion />

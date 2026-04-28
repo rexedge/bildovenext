@@ -8,27 +8,31 @@ export const runtime = "edge";
 
 export const revalidate = 0;
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const getResend = () => {
+     const apiKey = process.env.RESEND_API_KEY;
+     if (!apiKey) throw new Error("RESEND_API_KEY not configured");
+     return new Resend(apiKey);
+};
 
 export const sendAdminNotificationMail = async (
      data: Partial<z.infer<typeof EventFormSchema>>,
 ) => {
-     resend.emails.send({
+     getResend().emails.send({
           from: "Bildove  Team <support@bildovefinancialservices.com>",
-          reply_to: "bildovefinancial@gmail.com",
+          replyTo: "bildovefinancial@gmail.com",
           to: ["ap.oyeniran@gmail.com", "bildovefinancial@gmail.com"],
           subject: "New Registration!",
-          react: RegistrationAdminNotificationTemplate(data),
+          react: <RegistrationAdminNotificationTemplate {...data} />,
      });
 };
 export const sendUserNotificationMail = async (
      data: Partial<z.infer<typeof EventFormSchema>>,
 ) => {
-     resend.emails.send({
+     getResend().emails.send({
           from: "Bildove Team <support@bildovefinancialservices.com>",
-          reply_to: "bildovefinancial@gmail.com",
+          replyTo: "bildovefinancial@gmail.com",
           to: data.email!,
           subject: "Registration Successful!",
-          react: RegistrationUserNotificationTemplate(data),
+          react: <RegistrationUserNotificationTemplate {...data} />,
      });
 };

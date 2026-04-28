@@ -7,18 +7,18 @@ export const EventFormSchema = z.object({
      lastName: z.string().min(2, {
           message: "Enter valid last name.",
      }),
-     email: z.string().email({
+     email: z.email({
           message: "Enter valid email address.",
      }),
      phone: z.string().min(9, {
           message: "phone must be at least 9 characters.",
      }),
      noOfAttendees: z.enum(["1", "2"], {
-          required_error: "Select number of attendees.",
+          message: "Select number of attendees.",
      }),
      guestNames: z.string(),
      textReminder: z.enum(["yes", "no"], {
-          required_error: "Choose one.",
+          message: "Choose one.",
      }),
      eventToAttend: z.string().min(2, {
           message: "event must be selected.",
