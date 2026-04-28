@@ -250,7 +250,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="mt-24 md:mt-32 border-y border-border/60 bg-foreground text-background overflow-hidden">
+        <div className="mt-24 md:mt-32 border-y border-border/60 bg-secondary/50 text-foreground overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap py-5">
             {[...MARQUEE_WORDS, ...MARQUEE_WORDS, ...MARQUEE_WORDS].map(
               (w, i) => (
@@ -384,10 +384,10 @@ export default function HomePage() {
       </section>
 
       {/* ===== WHY CHOOSE US — BENTO ===== */}
-      <section className="relative py-24 md:py-32 bg-foreground text-background overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-secondary/50 text-foreground overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(hsl(var(--background))_1px,transparent_1px)] [background-size:24px_24px]"
+          className="absolute inset-0 opacity-[0.06] [background-image:radial-gradient(hsl(var(--foreground))_1px,transparent_1px)] [background-size:24px_24px]"
         />
         <div
           aria-hidden
@@ -404,7 +404,7 @@ export default function HomePage() {
                 One unwavering promise.
               </h2>
             </div>
-            <p className="max-w-sm text-background/70 text-base">
+            <p className="max-w-sm text-muted-foreground text-base">
               We don&apos;t sell products. We build the long, quiet kind of
               wealth that survives bad years and outlives generations.
             </p>
@@ -416,7 +416,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6 }}
-              className="md:col-span-4 md:row-span-2 group relative rounded-3xl border border-background/15 bg-background/[0.04] p-8 md:p-12 hover:bg-background/[0.07] transition-colors overflow-hidden"
+              className="md:col-span-4 md:row-span-2 group relative rounded-3xl border border-border/60 bg-card/40 p-8 md:p-12 hover:bg-card/60 transition-colors overflow-hidden"
             >
               <div className="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-primary/30 blur-3xl group-hover:bg-primary/40 transition-colors" />
               <div className="relative">
@@ -426,7 +426,7 @@ export default function HomePage() {
                 <h3 className="mt-8 font-display text-3xl md:text-4xl font-semibold tracking-tight max-w-md">
                   {WHY_CHOOSE_US[0].title}
                 </h3>
-                <p className="mt-5 text-background/70 max-w-lg leading-relaxed">
+                <p className="mt-5 text-muted-foreground max-w-lg leading-relaxed">
                   {WHY_CHOOSE_US[0].description}
                 </p>
                 <div className="mt-10 flex items-center gap-2 text-sm text-primary group-hover:gap-4 transition-all">
@@ -442,7 +442,7 @@ export default function HomePage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-                className="md:col-span-2 group relative rounded-3xl border border-background/15 bg-background/[0.04] p-8 hover:bg-background/[0.07] transition-colors"
+                className="md:col-span-2 group relative rounded-3xl border border-border/60 bg-card/40 p-8 hover:bg-card/60 transition-colors"
               >
                 <div className="font-display text-4xl font-bold text-primary leading-none">
                   0{i + 2}
@@ -450,7 +450,7 @@ export default function HomePage() {
                 <h3 className="mt-6 font-display text-2xl font-semibold tracking-tight">
                   {w.title}
                 </h3>
-                <p className="mt-3 text-sm text-background/70 leading-relaxed line-clamp-4">
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed line-clamp-4">
                   {w.description}
                 </p>
               </motion.div>
@@ -585,7 +585,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== FINAL CTA ===== */}
-      <section className="relative py-24 md:py-32 bg-foreground text-background overflow-hidden">
+      <section className="relative py-24 md:py-32 bg-secondary/50 text-foreground overflow-hidden">
         <div
           aria-hidden
           className="absolute -top-32 -left-32 h-[500px] w-[500px] rounded-full bg-accent/30 blur-3xl"
@@ -601,7 +601,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-background/20 bg-background/5 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-background/80 mb-8">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.2em] text-foreground/80 mb-8">
               <CalendarCheck className="h-3 w-3" />
               30-minute strategy call · No cost · No pressure
             </span>
@@ -611,7 +611,7 @@ export default function HomePage() {
               <br />
               Let&apos;s shape it.
             </h2>
-            <p className="mt-8 max-w-xl mx-auto text-background/70 text-lg">
+            <p className="mt-8 max-w-xl mx-auto text-muted-foreground text-lg">
               Sit down with a licensed advisor who actually listens. Walk away
               with a plan that fits your real life.
             </p>
@@ -619,7 +619,7 @@ export default function HomePage() {
               <Button
                 asChild
                 size="lg"
-                className="h-14 px-8 rounded-full bg-background text-foreground hover:bg-background/90 text-base shadow-2xl"
+                className="h-14 px-8 rounded-full bg-foreground text-background hover:bg-background/90 text-base shadow-2xl"
               >
                 <Link
                   href={COMPANY_PROFILE.calendly}
@@ -634,7 +634,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="ghost"
-                className="h-14 px-7 rounded-full text-background hover:bg-background/10 hover:text-background text-base"
+                className="h-14 px-7 rounded-full text-foreground hover:bg-foreground/10 hover:text-foreground text-base"
               >
                 <Link href={`tel:${COMPANY_PROFILE.phone}`}>
                   Or call {COMPANY_PROFILE.phone}

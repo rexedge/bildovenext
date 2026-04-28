@@ -26,6 +26,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                          alt="Hero Image"
                          height={2160}
                          width={2160}
+                         priority
+                         fetchPriority="high"
+                         sizes="100vw"
                          className="h-full w-full object-cover object-center"
                     />
                     <div className="absolute inset-0 bg-teal-900 opacity-80" />

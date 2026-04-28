@@ -46,10 +46,10 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Featured pull-quote */}
-      <section className="relative isolate overflow-hidden py-16 md:py-24 bg-foreground text-background">
+      <section className="relative isolate overflow-hidden py-16 md:py-24 bg-secondary/50 text-foreground">
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 opacity-[0.06] [background-image:linear-gradient(hsl(var(--background))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--background))_1px,transparent_1px)] [background-size:64px_64px]"
+          className="absolute inset-0 -z-10 opacity-[0.06] [background-image:linear-gradient(hsl(var(--foreground))_1px,transparent_1px),linear-gradient(90deg,hsl(var(--foreground))_1px,transparent_1px)] [background-size:64px_64px]"
         />
         <div
           aria-hidden
@@ -95,12 +95,12 @@ export default function TestimonialsPage() {
               <blockquote className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-[-0.02em] leading-[1.05] text-balance">
                 &ldquo;{featured.description}&rdquo;
               </blockquote>
-              <div className="mt-8 flex items-center gap-4 pt-6 border-t border-background/15">
+              <div className="mt-8 flex items-center gap-4 pt-6 border-t border-border/60">
                 <div>
                   <p className="font-display text-xl font-semibold">
                     {featured.title}
                   </p>
-                  <p className="text-sm text-background/65">Verified client</p>
+                  <p className="text-sm text-muted-foreground">Verified client</p>
                 </div>
               </div>
             </motion.div>

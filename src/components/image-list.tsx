@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-     AnimatePresence,
-     motion,
-     useMotionValue,
-     useSpring,
-     useTransform,
+    AnimatePresence,
+    motion,
+    useMotionValue,
+    useSpring,
+    useTransform,
 } from "framer-motion";
 import Image from "next/image";
 
@@ -38,7 +38,9 @@ export default function ImageList({
                     <motion.div
                          key={"images" + idx}
                          style={{
-                              rotate: Math.random() * 20 - 10,
+                              // Deterministic rotation per index avoids SSR/CSR
+                              // hydration mismatches caused by Math.random().
+                              rotate: ((idx * 37) % 20) - 10,
                          }}
                          whileHover={{
                               scale: 1.1,
