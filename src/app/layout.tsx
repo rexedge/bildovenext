@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
+import Script from "next/script";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 import NavBar from "@/components/ui/nav-bar";
 import Footer from "@/components/ui/footer";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -26,6 +28,12 @@ export const metadata: Metadata = {
   },
   description:
     "Bildove Financial helps families across the United States protect income, build legacy, and unlock long-term financial freedom with tailored insurance and retirement strategies.",
+  applicationName: "Bildove Financial Services",
+  referrer: "origin-when-cross-origin",
+  metadataBase: new URL("https://www.bildovefinancialservices.com/"),
+  alternates: {
+    canonical: "https://www.bildovefinancialservices.com/",
+  },
   keywords: [
     "financial planning",
     "life insurance",
@@ -33,6 +41,8 @@ export const metadata: Metadata = {
     "retirement planning",
     "infinite banking",
     "final expense",
+    "licensed financial professional",
+    "IUL",
     "Bildove Financial",
   ],
   openGraph: {
@@ -68,6 +78,31 @@ export default function RootLayout({
           </div>
           <Toaster position="top-right" richColors closeButton theme="system" />
         </ThemeProvider>
+        <Analytics />
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '528408153212828');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            className="hidden"
+            alt=""
+            src="https://www.facebook.com/tr?id=528408153212828&ev=PageView&noscript=1"
+          />
+        </noscript>
       </body>
     </html>
   );

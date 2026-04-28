@@ -1,14 +1,14 @@
 /** @format */
 
 "use client";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import { CAROUSEL_IMAGES, COMPANY_PROFILE } from "@/utils/const";
-import Image from "next/image";
-import { Button } from "../ui/button";
-import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import { CalendarCheck, ArrowRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 export default function BCarousel() {
   return (

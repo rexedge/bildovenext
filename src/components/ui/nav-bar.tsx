@@ -23,6 +23,7 @@ const NAV_LINKS = [
 
 export default function NavBar() {
   const pathname = usePathname();
+  const hideNav = pathname?.startsWith("/event") ?? false;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -94,7 +95,7 @@ export default function NavBar() {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
-          {NAV_LINKS.map((link, i) => {
+          {!hideNav && NAV_LINKS.map((link, i) => {
             const active = pathname === link.href;
             const num = String(i + 1).padStart(2, "0");
             return (
